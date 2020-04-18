@@ -18,10 +18,10 @@ function App() {
     <div>
       <Nav />
       <Switch>
-        <Route exact path={["/", "/books"]}>
+        <Route exact path={["/books"]}>
         <Books />
         </Route>
-        <Route exact path={["/country"]}>
+        <Route exact path={["/", "/country"]}>
         <CountryPage />
         </Route>
         <Route exact path={["/countries/:name"]}>
