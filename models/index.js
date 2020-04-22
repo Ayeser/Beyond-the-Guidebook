@@ -1,4 +1,5 @@
 module.exports = {
-  Book: require("./book"),
-  Country: require("./country")
-};
+    Comments: require("./comments"),
+    Countries: require("./countries"),
+    Users: require("./users")
+  };

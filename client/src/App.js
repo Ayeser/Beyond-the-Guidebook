@@ -1,11 +1,10 @@
 import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import CountryPage from "./pages/CountryPage";
+import AllCountries from "./pages/AllCountries";
 import SpecificCountryPage from "./pages/SpecificCountryPage";
 import Nav from "./components/Nav";
 // import { BrowserRouter } from "react-router-dom";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,18 +17,12 @@ function App() {
     <div>
       <Nav />
       <Switch>
-        <Route exact path={["/books"]}>
-        <Books />
-        </Route>
-        <Route exact path={["/", "/country"]}>
-        <CountryPage />
+        <Route exact path={["/"]}>
+        <AllCountries />
         </Route>
         <Route exact path={["/countries/:name"]}>
         <SpecificCountryPage />
         </Route>
-      <Route exact path="/books/:id">
-        <Detail />
-      </Route>
       <Route>
         <NoMatch />
       </Route>
