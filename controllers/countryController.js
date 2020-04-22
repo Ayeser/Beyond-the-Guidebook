@@ -8,15 +8,9 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  switchCountry: function(req, res) {
-    db.Countries
-      .find(req.params.name)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
   findByCountry: function(req, res) {
     db.Countries
-      .findByCountry(req.params.name)
+      .find( { "name" : req.params.name } )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

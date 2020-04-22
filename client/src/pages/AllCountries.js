@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import CountrySwitchBtn from "../components/CountrySwitchBtn";
 import Jumbotron from "../components/Jumbotron";
 import CountryJumbotron from "../components/CountryJumbotron";
 import API from "../utils/API";
@@ -10,7 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 
 function CountryPage() {
   const [countries, setCountries] = useState([])
-  const [specificCountry, setCountry] = useState({})
+  const [singleCountry, setCountry] = useState({})
   const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
@@ -26,11 +25,9 @@ function CountryPage() {
   };
 
   function switchCountry(name) {
-    console.log(name);
     API.switchCountry(name)
-      .then(res => setCountry(res.data))
+      .then(res => setCountry(res.data[0]))
       .catch(err => console.log(err));
-    console.log(specificCountry);
   }
 
   function handleInputChange(event) {
@@ -55,20 +52,22 @@ function CountryPage() {
     return (
       <Container fluid>
 <Row>
-          <Col size="md-6 sm-12">
-            <CountryJumbotron>
-              <h1>Country Name {specificCountry.name}</h1>
+<CountryJumbotron>
+              <h1>{singleCountry.name}</h1>
+              <img src={singleCountry.profilePicture} alt="Country Flag Picture" />
             </CountryJumbotron>
+  </Row>
+  <Row>
+          <Col size="md-2 sm-4">
             {countries.length ? (
               <List>
                 {countries.map(country => (
                   <ListItem key={country.name}>
-                    <Link to={"/countries/" + country.name}>
+                    <Link to={"/countries/" + country.name} onClick={() => switchCountry(country.name)}>
                       <strong>
                         {country.name}
                       </strong>
                     </Link>
-                    <CountrySwitchBtn onClick={() => switchCountry(country.name)} />
                   </ListItem>
                 ))}
               </List>
@@ -76,15 +75,41 @@ function CountryPage() {
               <h3>No Results to Display</h3>
             )}
           </Col>
-          <Col size="md-6">
+<Col size="md-10 sm-8">
+<Row>
+          <Col size="md-5 sm-8">
             <Jumbotron>
-              <h1>What advice would you give about visiting this culture?</h1>
+              <h1>Culture Box #1</h1>
+              <p>{singleCountry.culture}</p>
             </Jumbotron>
-            <form>
+            </Col><Col size="md-5 sm-8">
+            <Jumbotron>
+              <h1>Culture Box #2</h1>
+              {singleCountry.description}
+            </Jumbotron>
+            </Col>
+            </Row>
+            <Row>
+            <Col size="md-5 sm-8">
+            <Jumbotron>
+              <h1>Culture Box #3</h1>
+            </Jumbotron>
+            </Col>
+            <Col size="md-5 sm-8">
+            <Jumbotron>
+              <h1>Culture Box #4</h1>
+            </Jumbotron>
+            </Col>
+            </Row>
+            <Row>
+              <Col size="md=9 sm-7">
+            <form style={{width:"100%"}}>
+            <h1>Add a comment for this country</h1>
               <Input
                 onChange={handleInputChange}
                 name="author"
                 placeholder="Author (required)"
+
               />
               <TextArea
                 onChange={handleInputChange}
@@ -98,8 +123,10 @@ function CountryPage() {
                 Submit Comment
               </FormBtn>
             </form>
-          </Col>
-        </Row>
+            </Col>
+            </Row>
+</Col>
+          </Row> 
       </Container>
     );
   }
