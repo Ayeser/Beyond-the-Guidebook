@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
-
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/beyondtheguidebook"
 );
 
-const countrySeed = [
+const countriesSeed = [
     {
       name: "Afghanistan",
       culture: "Culture of Afghanistan",
@@ -78,12 +76,12 @@ const countrySeed = [
       description: "Capital city is Vienna",
       profilePicture: "<img src='https://via.placeholder.com/750x500'>",
       date: new Date(Date.now())
-    },
+    }
   ];
   
-  db.Country
+  db.Countries
     .remove({})
-    .then(() => db.Country.collection.insertMany(countrySeed))
+    .then(() => db.Countries.collection.insertMany(countriesSeed))
     .then(data => {
       console.log(data.result.n + " records inserted!");
       process.exit(0);
@@ -92,4 +90,6 @@ const countrySeed = [
       console.error(err);
       process.exit(1);
     });
+
+
 

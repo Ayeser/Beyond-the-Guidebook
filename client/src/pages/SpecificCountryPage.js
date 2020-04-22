@@ -7,78 +7,70 @@ import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+// import { restart } from "nodemon";
 
 function SpecificCountry(props) {
-    const [specificCountry, setCountry] = useState({})
-    const {name} = useParams();
-    const {profilePicture} = useParams();
-    useEffect(() => {
-        API.switchCountry(name)
-        .then(res => setCountry(res.data))
-        .catch(err => console.log(err));
-        console.log(name);
-    }, [])
+  const [countries, setCountries] = useState({})
+  const [specificCountry, setCountry] = useState({})
+  const [formObject, setFormObject] = useState({})
 
-    const [countries, setCountries] = useState([])
-    const [formObject, setFormObject] = useState({})
-  
-    useEffect(() => {
-      loadCountries()
-    }, [])
-  
-    function loadCountries() {
-      API.getCountries()
-        .then(res => 
-          setCountries(res.data)
-        )
-        .catch(err => console.log(err));
-    };
-  
-    function switchCountry(name) {
-      console.log(name);
-      API.switchCountry(name)
-        .then(res => setCountry(res.data))
-        .catch(err => console.log(err));
-      console.log(specificCountry);
-    }
-  
-    function handleInputChange(event) {
-      const { name, value} = event.target;
-      setFormObject({...formObject, [name]: value})
-    };
-  
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      console.log("Form submitted!");
-      // if (formObject.name && formObject.author) {
-      //   API.saveComment({
-      //     author: formObject.author,
-      //     synopsis: formObject.comment
-      //   })
-      //   //change next line eventually to loadComments()
-      //     .then(res => loadCountries())
-      //     .catch(err => console.log(err));
-      // }
-    };
+  useEffect(() => {
+    loadCountries()
+  }, [])
+
+  function loadCountries() {
+    API.getCountries()
+      .then(res => 
+        setCountries(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
+  function switchCountry(name) {
+    console.log(name);
+    API.switchCountry(name)
+      .then(res => setCountry(res.data))
+      .catch(err => console.log(err));
+    console.log(specificCountry);
+  }
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log("Form submitted!");
+    // if (formObject.name && formObject.author) {
+    //   API.saveComment({
+    //     author: formObject.author,
+    //     synopsis: formObject.comment
+    //   })
+    //   //change next line eventually to loadComments()
+    //     .then(res => loadCountries())
+    //     .catch(err => console.log(err));
+    // }
+  };
 
     return (
         <Container fluid>
         <Row>
                   <Col size="md-6 sm-12">
                     <CountryJumbotron>
-                      <h1>{name}</h1>
-                      <img src={profilePicture} alt={ name }></img>
+                      <h1>{specificCountry.name}</h1>
                     </CountryJumbotron>
+
                     {countries.length ? (
                       <List>
-                        {countries.map(country => (
-                          <ListItem key={country.name}>
-                            <Link to={"/countries/" + country.name}>
+                        {countries.map(name => (
+                          <ListItem key={name}>
+                            <Link to={"/countries/" + name}>
                               <strong>
-                                {country.name}
+                                {name}
                               </strong>
                             </Link>
-                            <CountrySwitchBtn onClick={() => switchCountry(country.name)} />
+                            <CountrySwitchBtn onClick={() => switchCountry(name)} />
                           </ListItem>
                         ))}
                       </List>

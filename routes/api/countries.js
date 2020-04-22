@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const countryController = require("../../controllers/countryController");
 
-// Matches with "/api/country"
+// Matches with "/api/countries"
 router.route("/")
   .get(countryController.findAll)
 
-// Matches with "/api/country/:name"
+// Matches with "/api/countries/:name"
 router
   .route("/:name")
   .get(countryController.findByCountry)
