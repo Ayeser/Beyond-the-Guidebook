@@ -7,7 +7,7 @@ router.route("/")
 
 // Matches with "/api/countries/:name"
 router
-  .route("/:name")
+  .route("/specificCountry/:name")
   .get(countryController.findByCountry)
 
 module.exports = router;

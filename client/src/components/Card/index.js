@@ -10,7 +10,7 @@ function Card(props) {
          {props.text}
         </p>
         <a href="#" class="btn btn-primary">
-       kjljl {props.countryName} 
+        {props.countryName} 
         </a>
       </div>
     </div>
