@@ -13,6 +13,7 @@ const usersSchema = new Schema({
   hash: { type: String },
   salt: { type: String },
   bio: { type: String, required: false},
+  homeCountry: { type: String, required: false},
   profilePicture: { type: String, required: false},
   placesVisited: { type: String, required: false },
   placesFuture: { type: String, required: false },
