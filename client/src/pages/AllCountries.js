@@ -8,7 +8,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 function CountryPage() {
-  const [countries, setCountries] = useState([])
+  const [countries, setCountries] = useState()
   const [singleCountry, setCountry] = useState({})
   const [formObject, setFormObject] = useState({})
 
@@ -19,9 +19,12 @@ function CountryPage() {
   function loadCountries() {
     API.getCountries()
       .then(res => 
+        {console.log(res);
         setCountries(res.data)
+        }
       )
       .catch(err => console.log(err));
+      console.log("countries is: " + countries);
   };
 
   function switchCountry(name) {
@@ -75,7 +78,8 @@ function CountryPage() {
   </Row>
   <Row>
           <Col size="md-2 sm-4">
-            {countries.length ? (
+            {console.log(countries)}
+            {countries && countries.length  > 0 ? (
               <List>
                 {countries.map(country => (
                   <ListItem key={country.name}>

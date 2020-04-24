@@ -15,10 +15,10 @@ function Welcome() {
   function handleFormCreateSubmit(event) {
     event.preventDefault();
     console.log("Form submitted!");
-      API.createUser({
+      return API.createUser({
         userName: formObject.createUsername,
         email: formObject.createEmail,
-        hash: formObject.createPassword
+        password: formObject.createPassword
       })
         .then(res => console.log(res))
         .catch(err => console.log(err));
