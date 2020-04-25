@@ -12,4 +12,10 @@ export default {
     return axios.get(`https://www.triposo.com/api/20200405/location.json?id=${name}&account=${process.env.REACT_APP_APIID}&token=${process.env.REACT_APP_APIKEY}`)
 
   },
+  createUser: function(req) {
+    return axios.get("/api/users/create/" + req.userName);
+  },
+  login: function(req) {
+    return axios.get("/api/users/" + req.userName);
+  }
 };

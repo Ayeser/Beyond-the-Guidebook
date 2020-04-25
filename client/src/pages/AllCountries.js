@@ -35,16 +35,32 @@ function CountryPage() {
     setFormObject({...formObject, [name]: value})
   };
 
-  function handleFormSubmit(event) {
+  function handleFormSubmitAdvice(event) {
     event.preventDefault();
-    console.log("Form submitted!");
-    // if (formObject.name && formObject.author) {
+    console.log("Form submitted and your advice is: " + event.target);
+      //        Would need to add place to the api call below so comments can be retrieved later by place
+      //    HAVE NOT SET UP ROUTES FOR THESE YET
     //   API.saveComment({
-    //     author: formObject.author,
-    //     synopsis: formObject.comment
+    //     person: formObject.author,
+    //     advice: formObject.comment
     //   })
     //   //change next line eventually to loadComments()
     //     .then(res => loadCountries())
+    //     .catch(err => console.log(err));
+    // }
+  };
+
+  function handleFormSubmitQuestion(event) {
+    event.preventDefault();
+    console.log("Form submitted!");
+    //        Would need to add place to the api call below so comments can be retrieved later by place
+     //    HAVE NOT SET UP ROUTES FOR THESE YET
+    //   API.saveQuestion({
+    //     person: formObject.questioner,
+    //     question: formObject.question
+    //   })
+    //   //change next line eventually to loadComments()
+    //     .then(res => console.log("Question is..."))
     //     .catch(err => console.log(err));
     // }
   };
@@ -54,7 +70,7 @@ function CountryPage() {
 <Row>
 <CountryJumbotron>
               <h1>{singleCountry.name}</h1>
-              <img src={singleCountry.profilePicture} alt="Country Flag Picture" />
+              <img src={singleCountry.profilePicture} alt="Country Flag" />
             </CountryJumbotron>
   </Row>
   <Row>
@@ -102,9 +118,9 @@ function CountryPage() {
             </Col>
             </Row>
             <Row>
-              <Col size="md=9 sm-7">
-            <form style={{width:"100%"}}>
-            <h1>Add a comment for this country</h1>
+              <Col size="md=5 sm-8">
+            <form>
+            <h2>What "beyond the guidebook" advice can you offer a prospective traveller to this country?</h2>
               <Input
                 onChange={handleInputChange}
                 name="author"
@@ -117,12 +133,36 @@ function CountryPage() {
                 placeholder="Comment would go here"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
+                disabled={!(formObject.author && formObject.comment)}
+                onClick={handleFormSubmitAdvice}
               >
                 Submit Comment
               </FormBtn>
             </form>
+            <h3>Comments will populate here soon</h3>
+            </Col>
+            <Col size="md=5 sm-8">
+            <form>
+            <h2>Have any questions about the culture of this country?</h2>
+              <Input
+                onChange={handleInputChange}
+                name="questioner"
+                placeholder="Author (required)"
+
+              />
+              <TextArea
+                onChange={handleInputChange}
+                name="question"
+                placeholder="Question here"
+              />
+              <FormBtn
+                disabled={!(formObject.questioner && formObject.question)}
+                onClick={handleFormSubmitQuestion}
+              >
+                Submit Comment
+              </FormBtn>
+            </form>
+            <h3>Questions will populate here soon</h3>
             </Col>
             </Row>
 </Col>

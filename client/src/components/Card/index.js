@@ -6,10 +6,10 @@ function Card(props) {
       <img src="..." class="card-img-top" alt="..."></img>
       <div class="card-body">
   <h5 class="card-title">{props.title}</h5>
-        <p class="card-text">
+        <p class="card-text"> </p>
          {props.text}
-        </p>
-        <a href="#" class="btn btn-primary">
+        {/* {/* </p> */}
+        <a href="../../index.html" class="btn btn-primary"> */
         {props.countryName} 
         </a>
       </div>

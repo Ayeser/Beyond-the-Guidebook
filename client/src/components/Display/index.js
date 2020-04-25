@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card"
-import Axios from "axios";
+// import Axios from "axios";
 import Api from "../../utils/API";
 import {Navbar} from "react-bootstrap"
 
 function Display({ children }) {
-  const [countryInfo, setCountryInfo] = useState([])
+  const [Countryinfo, setCountryInfo] = useState([])
  
 
   // Load all books and store them with setBooks
@@ -27,7 +27,7 @@ function Display({ children }) {
      <Navbar>
 
      </Navbar>
-      <Card title="japan" text="lorem 18" countryName = "Japan"/>
+      
 
     </div>
   );
