@@ -9,22 +9,22 @@ mongoose.connect(
 const usersSeed = [
     {
       email: "Matthew@email.com",
-      userName: "Matthew",
+      username: "Matthew",
       password: "password"
     },
     {
       email: "Carissa@email.com",
-      userName: "Carissa",
+      username: "Carissa",
       password: "password",
     },
     {
       email: "Stephen@email.com",
-      userName: "Stephen",
+      username: "Stephen",
       password: "password",
     },
     {
       email: "Aiden@email.com",
-      userName: "Aiden",
+      username: "Aiden",
       password: "password",
     }
   ]

@@ -8,28 +8,35 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 function CountryPage() {
-  const [countries, setCountries] = useState()
-  const [singleCountry, setCountry] = useState({})
-  const [formObject, setFormObject] = useState({})
+  const [countries, setCountries] = useState();
+  const [singleCountry, setCountry] = useState({name:"United States", profilePicture:"https://www.worldatlas.com/r/w480/img/flag/us-flag.jpg"});
+  const [formObject, setFormObject] = useState({});
+  const [commentsObject, setCommentsObject] = useState({});
+  const [questionsObject, setQuestionsObject] = useState({});
 
   useEffect(() => {
-    loadCountries()
-  }, [])
+    loadCountries();
+  })
 
   function loadCountries() {
     API.getCountries()
       .then(res => 
-        {console.log(res);
+        {
         setCountries(res.data)
         }
       )
       .catch(err => console.log(err));
-      console.log("countries is: " + countries);
   };
 
   function switchCountry(name) {
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
+      .catch(err => console.log(err));
+      API.loadComments(name)
+      .then(res => setCommentsObject(res.data))
+      .catch(err => console.log(err));
+      API.loadQuestions(name)
+      .then(res => setQuestionsObject(res.data))
       .catch(err => console.log(err));
   }
 
@@ -40,32 +47,24 @@ function CountryPage() {
 
   function handleFormSubmitAdvice(event) {
     event.preventDefault();
-    console.log("Form submitted and your advice is: " + event.target);
-      //        Would need to add place to the api call below so comments can be retrieved later by place
-      //    HAVE NOT SET UP ROUTES FOR THESE YET
-    //   API.saveComment({
-    //     person: formObject.author,
-    //     advice: formObject.comment
-    //   })
-    //   //change next line eventually to loadComments()
-    //     .then(res => loadCountries())
-    //     .catch(err => console.log(err));
-    // }
-  };
+      return API.saveComment({
+        place: singleCountry.name,
+        person: formObject.author,
+        advice: formObject.comment
+      })
+        .then(console.log("Comment uploaded"))
+        .catch(err => console.log(err));
+    };
 
   function handleFormSubmitQuestion(event) {
     event.preventDefault();
-    console.log("Form submitted!");
-    //        Would need to add place to the api call below so comments can be retrieved later by place
-     //    HAVE NOT SET UP ROUTES FOR THESE YET
-    //   API.saveQuestion({
-    //     person: formObject.questioner,
-    //     question: formObject.question
-    //   })
-    //   //change next line eventually to loadComments()
-    //     .then(res => console.log("Question is..."))
-    //     .catch(err => console.log(err));
-    // }
+    return API.saveQuestion({
+      place: singleCountry.name,
+      person: formObject.questioner,
+      question: formObject.question
+    })
+      .then(console.log("Question uploaded"))
+      .catch(err => console.log(err));
   };
 
     return (
@@ -78,7 +77,20 @@ function CountryPage() {
   </Row>
   <Row>
           <Col size="md-2 sm-4">
-            {console.log(countries)}
+<form>
+  <Input
+                onChange={handleInputChange}
+                name="place"
+                placeholder="Country"
+                onKeyPress={event => {
+                  if (event.key === 'Enter') {
+                    event.preventDefault();
+                    switchCountry(formObject.place);
+                  }
+                }}
+              />
+              </form>
+          
             {countries && countries.length  > 0 ? (
               <List>
                 {countries.map(country => (
@@ -143,7 +155,20 @@ function CountryPage() {
                 Submit Comment
               </FormBtn>
             </form>
-            <h3>Comments will populate here soon</h3>
+
+            {commentsObject && commentsObject.length  > 0 ? (
+              <List>
+                {commentsObject.map(comment => (
+                  <ListItem key={comment.advice}>
+                      <strong>
+                        {comment.advice + "     -" + comment.person}
+                      </strong>
+                  </ListItem>
+                ))}
+              </List>
+            ):(
+              <h3>No Results to Display</h3>
+            )}
             </Col>
             <Col size="md=5 sm-8">
             <form>
@@ -163,10 +188,22 @@ function CountryPage() {
                 disabled={!(formObject.questioner && formObject.question)}
                 onClick={handleFormSubmitQuestion}
               >
-                Submit Comment
+                Submit Question
               </FormBtn>
             </form>
-            <h3>Questions will populate here soon</h3>
+            {questionsObject && questionsObject.length  > 0 ? (
+              <List>
+                {questionsObject.map(questions => (
+                  <ListItem key={questions.question}>
+                      <strong>
+                        {questions.question + "     -" + questions.person}
+                      </strong>
+                  </ListItem>
+                ))}
+              </List>
+            ):(
+              <h3>No Results to Display</h3>
+            )}
             </Col>
             </Row>
 </Col>
