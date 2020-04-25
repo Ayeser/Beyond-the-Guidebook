@@ -1,61 +1,87 @@
-import React, { useEffect, useState } from "react";
-import { csv } from "d3-fetch";
-import { scaleLinear } from "d3-scale";
+import React from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
-  Sphere,
-  Graticule
+  Marker
 } from "react-simple-maps";
 
-  function MapChart({children}) {
+  // function MapChart({children}) {
     const geoUrl =
     "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
     
-    const colorScale = scaleLinear()
-    .domain([0.29, 0.68])
-    .range(["#ffedea", "#ff5233"]);
-  
-    const [data, setData] = useState([]);
-  
-    useEffect(() => {
-      csv(`/vulnerability.csv`).then(data => {
-        setData(data);
-      });
-    }, []);
+    const MapChart = () => {
+      return (
+        <ComposableMap
+          projection="geoNaturalEarth1"
+          projectionConfig={{
+            rotate: [-10, 0, 0],
+            scale: 147,
+            width: 980,
+            height: 551
+          }}
+        >
+          <Geographies geography={geoUrl}>
+            {({ geographies }) =>
+              geographies.map(geo => (
 
-
-    return (
-        <div>
-               {children}
-          <ComposableMap
-      projectionConfig={{
-        rotate: [-10, 0, 0],
-        scale: 147
-      }}
-    >
-      <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
-      <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
-      {data.length > 0 && (
-        <Geographies geography={geoUrl}>
-          {({ geographies }) =>
-            geographies.map(geo => {
-              const d = data.find(s => s.ISO3 === geo.properties.ISO_A3);
-              return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                  fill="#DDD"
+                  stroke="#FFF"
+                  style={{
+                    default: {
+                       fill: "#ECEFF1",
+                       stroke: "#607D8B",
+                       strokeWidth: 0.75,
+                       outline: "none",
+                    },
+                    hover: {
+                       fill: "#CFD8DC",
+                       stroke: "#607D8B",
+                       strokeWidth: 1,
+                       outline: "none",
+                    },
+                    pressed: {
+                       fill: "#FF5722",
+                       stroke: "#607D8B",
+                       strokeWidth: 1,
+                       outline: "none",
+                    }
+                 }}
                 />
-              );
-            })
-        }
-        </Geographies>
-      )}
-    </ComposableMap>
-  );
-        </div>
-  )};
+              ))
+            }
+          </Geographies>
+          <Marker coordinates={[-101, 53]} fill="#777">
+            <text textAnchor="middle" fill="#F53">
+              Canada
+            </text>
+            <circle
+          cx={0}
+          cy={0}
+          r={5}
+          style={{
+            stroke: "#FF5722",
+            strokeWidth: 3,
+            opacity: 0.9,
+          }}
+       />
+          </Marker>
+          <Marker coordinates={[-102, 38]} fill="#777">
+            <text textAnchor="middle" fill="#F53">
+              USA
+            </text>
+
+          </Marker>
+          <Marker coordinates={[-103, 25]} fill="#777">
+            <text textAnchor="middle" fill="#F53">
+              Mexico
+            </text>
+          </Marker>
+        </ComposableMap>
+      );
+    };
 
 export default MapChart;

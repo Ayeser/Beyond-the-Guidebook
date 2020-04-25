@@ -1,17 +1,15 @@
 
-const mongoose = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
-const crypto = require("crypto");
-const jwt = require("jsonwebtoken");
-const secret = require("../package.json").secret;
-
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
+mongoose.promise = Promise;
 
-const usersSchema = new Schema({
-  email: { type: String, lowercase: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true },
-  userName: { type: String, lowercase: true, unique: true, required: [true, "can't be blank"], match: [/^[a-zA-Z0-9]+$/, 'is invalid'], index: true },
-  hash: { type: String },
-  salt: { type: String },
+var usersSchema = new Schema({
+  // email: { type: String, lowercase: true, required: true, match: [/\S+@\S+\.\S+/, 'is invalid'], index: true },
+  // username: { type: String, lowercase: true, unique: true, required: [true, "Please enter a username"], match: [/^[a-zA-Z0-9]+$/, 'is invalid'], index: true }, 
+  email: { type: String },
+  username: { type: String },
+  password: { type: String },
   bio: { type: String, required: false},
   homeCountry: { type: String, required: false},
   profilePicture: { type: String, required: false},
@@ -20,40 +18,28 @@ const usersSchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-usersSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 
-usersSchema.methods.setPassword = function(password){
-  this.salt = crypto.randomBytes(16).toString('hex');
-  this.hash = crypto.pbkdf2Sync(password, this.salt, 10000, 512, 'sha512').toString('hex');
+usersSchema.methods = {
+  checkPassword: function (inputPassword) {
+    return bcrypt.compareSync(inputPassword, this.password)
+  },
+  hashPassword: plainTextPassword => {
+    return bcrypt.hashSync(plainTextPassword, 10)
+  }
 };
 
-usersSchema.methods.validPassword = function(password) {
-   var hash = crypto.pbkdf2Sync(password, this.salt, 10000, 512, 'sha512').toString('hex');
-   return this.hash === hash;
-  };
-
-  usersSchema.methods.generateJWT = function() {
-      var today = new Date();
-      var exp = new Date(today);
-      exp.setDate(today.getDate() + 60);
-    
-      return jwt.sign({
-        id: this._id,
-        username: this.username,
-        exp: parseInt(exp.getTime() / 1000),
-      }, secret);
-    };
-
-    usersSchema.methods.toAuthJSON = function(){
-        return {
-          username: this.username,
-          email: this.email,
-          token: this.generateJWT(),
-          bio: this.bio,
-          profilePicture: this.profilePicture
-        };
-      };
+//hooks for pre-saving
+usersSchema.pre('save', function (next) {
+  if (!this.password) {
+    console.log('models/users.js =======NO PASSWORD PROVIDED ========')
+    next()
+  } else {
+    console.log('models/users.js hashPassword in pre save');
+    this.password = this.hashPassword(this.password);
+    next()
+  }
+})
 
 const Users = mongoose.model("Users", usersSchema);
 
-module.exports = Users;
+module.exports = Users

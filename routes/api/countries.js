@@ -1,12 +1,28 @@
 const router = require("express").Router();
-const countryController = require("../../controllers/countryController");
+const db = require("../../models");
 
 // Matches with "/api/countries"
-router.route("/")
-  .get(countryController.findAll)
+router.get("/", (req, res) => {
+  db.Countries
+  .find({})
+  .sort({ date: -1 })
+  .then(dbModel => res.json(dbModel))
+  .catch(err => res.status(422).json(err));
+})
 
 // Matches with "/api/countries/:name"
-router.route("/specificCountry/:name")
-  .get(countryController.findByCountry)
+router.get("/specificCountry/:name", (req, res) => {
+  db.Countries
+      .find( { "name" : req.params.name } )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+})
+
+router.get("/specificCountry/:name", (req, res) => {
+  db.Countries
+      .find( { "name" : req.params.name } )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+})
 
 module.exports = router;

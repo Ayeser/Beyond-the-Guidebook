@@ -14,22 +14,22 @@ function Welcome() {
 
   function handleFormCreateSubmit(event) {
     event.preventDefault();
-    console.log("Form submitted!");
-      API.createUser({
-        userName: formObject.createUsername,
+      return API.createUser({
+        username: formObject.createUsername,
         email: formObject.createEmail,
-        hash: formObject.createPassword
+        password: formObject.createPassword
       })
-        .then(res => console.log(res))
+        .then(alert("Profile successfully created!"))
         .catch(err => console.log(err));
     };
 
   function handleFormLoginSubmit(event) {
     event.preventDefault();
-    console.log("Form submitted!");
-    API.login({
-        userName: formObject.loginName,
-        hash: formObject.loginPassword
+    console.log("Username being used to try to log in: " + formObject.loginName);
+    console.log("Passport being used to try to log in: " + formObject.loginPassword);
+    return API.login({
+        username: formObject.loginName,
+        password: formObject.loginPassword
       })
         .then(res => console.log(res))
         .catch(err => console.log(err))

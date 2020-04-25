@@ -4,6 +4,7 @@ import {Navbar,Form,FormControl} from "react-bootstrap"
 
 function Nav() {
   return (
+<<<<<<< HEAD
     <Navbar>
       Beyond the Guidebook
       <Form>
@@ -14,6 +15,19 @@ function Nav() {
     </Navbar>
    
     
+=======
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a className="navbar-brand" href="/">
+        Culture by Country
+      </a>
+      <a className="navbar-brand" href="/members">
+        Profile Page
+      </a>
+      <a className="navbar-brand" href="/countries">
+        Countries Page
+      </a>
+    </nav>
+>>>>>>> b49ef6e1939811af9746ec43b242c8a33376c753
   );
 }
 

@@ -23,7 +23,7 @@ function App() {
       <Route exact path={"/"}>
         <Welcome />
         </Route>
-        <Route exact path={"/countries/:name"}>
+        <Route exact path={["/countries", "/countries/:name"]}>
         <AllCountries />
         </Route>
         <Route exact path={["/members", "/members/:name"]}>
