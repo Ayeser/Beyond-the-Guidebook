@@ -13,18 +13,14 @@ router.post("/create", (req, res) => {
 });
 
 //below logs in
-router.post('/login', (req, res, next) => {
-        console.log(req.body)
-        next()
-    },
-    passport.authenticate('local'),
-    (req, res) => {
-        console.log('logged in', req.username);
-        var userInfo = {
-            username: req.user.username
-        };
-        res.send(userInfo);
-    }
+router.post('/login', passport.authenticate('local'),
+(req, res) => {
+    console.log('logged in', req.username);
+    var userInfo = {
+        username: req.user.username
+    };
+    res.send(userInfo);
+}
 );
 
 router.get('/', (req, res, next) => {

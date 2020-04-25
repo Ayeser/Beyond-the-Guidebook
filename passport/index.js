@@ -1,59 +1,60 @@
 const passport = require('passport')
-const Users = require('../models/users')
+const db = require('../models/')
 const LocalStrategy = require('passport-local')
+const bcrypt = require('bcryptjs')
 
-passport.use(new LocalStrategy(
-	// Our user will sign in using an email, rather than a "username"
-	{
-	  usernameField: "email"
-	},
-	function(email, password, done) {
-	  // When a user tries to sign in this code runs
-	  db.Users.findOne({
-		where: {
-		  email: email
-		}
-	  }).then(function(dbUser) {
-		// If there's no user with the given email
-		if (!dbUser) {
-		  return done(null, false, {
-			message: "Incorrect email."
-		  });
-		}
-		// If there is a user with the given email, but the password the user gives us is incorrect
-		else if (!dbUser.validPassword(password)) {
-		  return done(null, false, {
-			message: "Incorrect password."
-		  });
-		}
-		// If none of the above, return the user
-		return done(null, dbUser);
-	  });
-	}
-  ));
-
-// called on login, saves the id to session req.session.passport.user = {id:'..'}
 passport.serializeUser((user, done) => {
-	console.log('*** serializeUser called, user: ')
-	console.log(user) // the whole raw user object!
-	console.log('---------')
-	done(null, { _id: user._id })
-})
+    done(null, user.id);
+});
 
-// user object attaches to the request as req.user
 passport.deserializeUser((id, done) => {
-	console.log('DeserializeUser called')
-	Users.findOne(
-		{ _id: id },
-		'username',
-		(err, user) => {
-			console.log('*** Deserialize user, user:')
-			console.log(user)
-			console.log('--------------')
-			done(null, user)
-		}
-	)
-})
+    User.findById(id, (err, user) => {
+        done(err, user);
+    });
+});
 
+// Local Strategy
+passport.use(
+    new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
+        // Match User
+        User.findOne({ email: email })
+            .then(user => {
+                // Create new User
+                if (!user) {
+                    const newUser = new User({ email, password });
+                    // Hash password before saving in database
+                    bcrypt.genSalt(10, (err, salt) => {
+                        bcrypt.hash(newUser.password, salt, (err, hash) => {
+                            if (err) throw err;
+                            newUser.password = hash;
+                            newUser
+                                .save()
+                                .then(user => {
+                                    return done(null, user);
+                                })
+                                .catch(err => {
+                                    return done(null, false, { message: err });
+                                });
+                        });
+                    });
+                    // Return other user
+                } else {
+                    // Match password
+                    bcrypt.compare(password, user.password, (err, isMatch) => {
+                        if (err) throw err;
 
-module.exports = passport
+                        if (isMatch) {
+                            return done(null, user);
+                        } else {
+                            return done(null, false, { message: "Wrong password" });
+                        }
+                    });
+                }
+            })
+            .catch(err => {
+                return done(null, false, { message: err });
+            });
+    })
+);
+
+module.exports = passport;
