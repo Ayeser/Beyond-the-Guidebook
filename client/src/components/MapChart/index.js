@@ -56,6 +56,6 @@ import {
     </ComposableMap>
   );
         </div>
-  )};
+    )};
 
 export default MapChart;
