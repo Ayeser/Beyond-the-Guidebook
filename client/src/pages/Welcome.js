@@ -26,6 +26,7 @@ function Welcome() {
   function handleFormLoginSubmit(event) {
     event.preventDefault();
     console.log("Username being used to try to log in: " + formObject.loginName);
+    console.log("Passport being used to try to log in: " + formObject.loginPassword);
     return API.login({
         username: formObject.loginName,
         password: formObject.loginPassword

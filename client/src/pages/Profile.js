@@ -42,6 +42,7 @@ function Profile() {
       <Container fluid>
 <Row>
     <h1>Map should appear below:</h1>
+    </Row><Row>
 <div>
     <MapChart>
         <h3>The map below may be filled in with countries marked different colors</h3>
