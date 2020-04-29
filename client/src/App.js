@@ -4,8 +4,8 @@ import AllCountries from "./pages/AllCountries";
 import Welcome from "./pages/Welcome";
 import Profile from "./pages/Profile";
 import Nav from "./components/Nav";
-import Display from "./components/Display";
-import { BrowserRouter } from "react-router-dom";
+// import Display from "./components/Display";
+// import { BrowserRouter } from "react-router-dom";
 
 import {
   BrowserRouter as Router,
@@ -18,7 +18,7 @@ function App() {
     <Router>
     <div>
       <Nav />
-      <Display />
+      {/* <Display /> */}
       <Switch>
       <Route exact path={"/"}>
         <Welcome />

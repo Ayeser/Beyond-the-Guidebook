@@ -21,32 +21,21 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-<<<<<<< HEAD
     "bootstrap": "^4.4.1",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "d3-fetch": "^1.1.2",
     "d3-scale": "^3.2.1",
-=======
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "connect-ensure-login": "^0.1.1",
     "connect-mongo": "^3.2.0",
->>>>>>> b49ef6e1939811af9746ec43b242c8a33376c753
     "express": "^4.16.3",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-<<<<<<< HEAD
     "mongoose-unique-validator": "^2.0.3",
-    "react-bootstrap": "^1.0.1",
-    "react-router-dom": "^5.1.2"
-=======
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
-    "passport-local-mongoose": "^6.0.1",
-    "react-router-dom": "^5.1.2",
-    "webpack": "4.42.0"
->>>>>>> b49ef6e1939811af9746ec43b242c8a33376c753
+    "passport-local-mongoose": "^6.0.1"
   }
 }

@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
+
 function CountryPage() {
   const [countries, setCountries] = useState();
   const [singleCountry, setCountry] = useState({name:"United States", profilePicture:"https://www.worldatlas.com/r/w480/img/flag/us-flag.jpg"});
@@ -16,8 +17,22 @@ function CountryPage() {
 
   useEffect(() => {
     loadCountries();
-  })
+    getCountriesPoint();
+  },[singleCountry])
+  function getCountriesPoint() {
+    console.log(singleCountry);
+    API.getCountriesPoint(country.name)
+      .then(res => 
+      
+        {
+        console.log(res)
+          setCountries(res.data)
+        }
+      )
+      .catch(err => console.log(err));
 
+    };
+  
   function loadCountries() {
     API.getCountries()
       .then(res => 
@@ -29,6 +44,7 @@ function CountryPage() {
   };
 
   function switchCountry(name) {
+
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
       .catch(err => console.log(err));
@@ -38,7 +54,10 @@ function CountryPage() {
       API.loadQuestions(name)
       .then(res => setQuestionsObject(res.data))
       .catch(err => console.log(err));
-  }
+      API.getCountriesPoint(name)   
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err));
+    }
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -125,6 +144,7 @@ function CountryPage() {
             <Col size="md-5 sm-8">
             <Jumbotron>
               <h1>Culture Box #3</h1>
+          
             </Jumbotron>
             </Col>
             <Col size="md-5 sm-8">
