@@ -1,7 +1,6 @@
-import axios from "axios";
 
-
-export default {
+const axios = require('axios');
+ module.exports ={
   // Next section is for country axios calls
   getCountries: function () {
     return axios.get("/api/countries");
@@ -9,11 +8,12 @@ export default {
   switchCountry: function (name) {
     return axios.get("/api/countries/specificCountry/" + name);
   },
-  getCountriesPoint: function (singlecountry) {
-   console.log(singlecountry)
+  getCountriesPoint: function (singleCountry) {
+    console.log(singleCountry);
     return axios.get(
-      `https://www.triposo.com/api/20200405/poi.json?tag_labels=cuisine-Pizza&tag_labels=cuisine-Beer&location_id=${singlecountry}&count=10&order_by=score&fields=name,best_for,coordinates,score,id&account=${process.env.REACT_APP_APIID}&token=${process.env.REACT_APP_APIKEY}`
+      `https://www.triposo.com/api/20200405/poi.json?tag_labels=cuisine-Pizza&tag_labels=cuisine-Beer&location_id=${singleCountry.name}&count=10&order_by=score&fields=name,best_for,coordinates,score,id&account=${process.env.REACT_APP_APIID}&token=${process.env.REACT_APP_APIKEY}`
     );
+    //
   },
   loadComments: function (name) {
     return axios.get("/api/users/loadingComments/" + name);
