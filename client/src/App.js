@@ -5,6 +5,7 @@ import Welcome from "./pages/Welcome";
 import Profile from "./pages/Profile";
 import UserProfile from "./pages/UserProfile";
 import Nav from "./components/Nav";
+import { useParams } from "react-router-dom";
 // import Display from "./components/Display";
 // import { BrowserRouter } from "react-router-dom";
 
@@ -15,36 +16,33 @@ import {
 } from "react-router-dom";
 
 function App() {
+  // var {name} = useParams();
   return (
     <Router>
     <div>
       <Nav />
       {/* <Display /> */}
-      <Switch>
-      <Route exact path={"/"}>
+      
+     
         <Welcome />
+        <Route path="/*">
         </Route>
         <Route exact path={"/countries"}>
         <AllCountries />
         </Route>
         <Route exact path={"/countries/:name"}>
-        <AllCountries />
+        <AllCountries  />
         </Route>
         {/* Path for /members is to show an example */}
         <Route exact path={"/members"}>
         <Profile />
         </Route>
-<<<<<<< HEAD
-      <Route path="/*">
-=======
         <Route exact path={"/members/:username"}>
         <UserProfile />
         </Route>
       <Route>
->>>>>>> 64eac0d1e84ba566d00a72d6eba6b9bf2b9305dc
         <NoMatch />
       </Route>
-      </Switch>
     </div>
     </Router>
   );

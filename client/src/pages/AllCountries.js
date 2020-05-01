@@ -7,30 +7,31 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Leaves from "../components/Leaves";
-import { useParams } from "react-router-dom";
 
-function CountryPage() {
+
+function CountryPage({name}) {
   const [countries, setCountries] = useState();
   const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-  var {name} = useParams();
+
   
   useEffect(() => {
+    console.log(name)
     loadCountries();
-    getCountriesPoint();
-  }, []);
+    // getCountriesPoint(name);
+  },[] );
  
-  function getCountriesPoint() {
-    console.log(singleCountry.name);
-    API.getCountriesPoint(singleCountry.name)
-      .then((res) => {
-        console.log("strirng",res);
-        setCountries(res);
-      })
-      .catch((err) => console.log(err));
-  }
+  // function getCountriesPoint(name) {
+  //   console.log(singleCountry.name);
+  //   API.getCountriesPoint(singleCountry.name)
+  //     .then((res) => {
+  //       console.log("strirng",res);
+  //       setCountries(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
 
   function loadCountries() {
     API.getCountries()
@@ -45,6 +46,7 @@ function CountryPage() {
   };
 
   function switchCountry(name) {
+    // getCountriesPoint(name);
     API.switchCountry(name)
       .then((res) => setCountry(res.data[0]))
       .catch((err) => console.log(err));
@@ -54,9 +56,9 @@ function CountryPage() {
     API.loadQuestions(name)
       .then((res) => setQuestionsObject(res.data))
       .catch((err) => console.log(err));
-    API.getCountriesPoint(name)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+    // API.getCountriesPoint(name)
+    //   .then((res) => console.log(res.data))
+    //   .catch((err) => console.log(err));
   }
 
   function handleInputChange(event) {

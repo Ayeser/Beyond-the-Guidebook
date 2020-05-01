@@ -13,7 +13,7 @@ const axios = require('axios');
     return axios.get(
       `https://www.triposo.com/api/20200405/poi.json?tag_labels=cuisine-Pizza&tag_labels=cuisine-Beer&location_id=${singleCountry.name}&count=10&order_by=score&fields=name,best_for,coordinates,score,id&account=${process.env.REACT_APP_APIID}&token=${process.env.REACT_APP_APIKEY}`
     );
-    //
+    
   },
   loadComments: function (name) {
     return axios.get("/api/users/loadingComments/" + name);
@@ -70,7 +70,7 @@ saveComment: function(req) {
 },
 saveQuestion: function(req) {
   return axios.post("/api/users/saveQuestion", {"person": req.person, "place": req.place, "question": req.advice});
-}
+},
 
   saveComment: function (req) {
     return axios.post("/api/users/saveComment", {
