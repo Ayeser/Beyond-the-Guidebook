@@ -4,6 +4,7 @@ import API from "../utils/API";
 import { Row, Col, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 
+
 function Welcome() {
   const [formObject, setFormObject] = useState({});
 
@@ -19,21 +20,24 @@ function Welcome() {
         email: formObject.createEmail,
         password: formObject.createPassword
       })
-        .then(alert("Profile successfully created!"))
+        .then(console.log("Create an account request sent!"))
         .catch(err => console.log(err));
     };
 
   function handleFormLoginSubmit(event) {
     event.preventDefault();
-    console.log("Username being used to try to log in: " + formObject.loginName);
-    console.log("Passport being used to try to log in: " + formObject.loginPassword);
     return API.login({
         username: formObject.loginName,
         password: formObject.loginPassword
       })
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
-    };
+      .then(res => {
+        if (res.data.status === 500) {
+          alert("Username/Password cannot be found")
+        } else if (res.data.status === 201) {
+          window.location.replace("/members/" + res.data.data.username)
+        }})
+        .catch(err => console.log(err));
+      }
 
     return (
       <Container fluid>

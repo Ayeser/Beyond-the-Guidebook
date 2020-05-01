@@ -17,21 +17,14 @@ export default {
   createUser: function(req) {
     return axios.post("/api/users/create/", {"email": req.email, "username": req.username, "password": req.password});
   },
+  getUser: function(username) {
+    return axios.get("/api/users/members/" + username);
+  },
+  getUserAlreadyAuthorized: function(username) {
+    return axios.get("/api/users/authorizedMember/" + username);
+  },
   login: function(req) {
     return axios.post("/api/users/login/", { "username" : req.username, "password": req.password })
-    .then(response => {
-      console.log(response);
-      if (response.status === 200) {
-        console.log("Successful signup")
-        console.log(response.data.username);
-      } else {
-        console.log("Signup error")
-      }
-    })
-    .catch(error => {
-      console.log("Signup server error");
-      console.log(error);
-    });
   },
 
 //For testing purposes here is a call to get user info
@@ -40,6 +33,9 @@ fortesting: function(username) {
 },
 editProfile: function(req) {
   return axios.put("/api/users/editProfile", {"username": req.username, "bio": req.bio, "homeCountry": req.homeCountry, "placesVisited": req.placesVisited, "placesFuture": req.placesFuture});
+},
+editBio: function(req) {
+  return axios.put("/api/users/editBio", {"username": req.username, "bio": req.bio,});
 },
 
 saveComment: function(req) {
