@@ -7,17 +7,16 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Leaves from "../components/Leaves";
+import { useParams } from "react-router-dom";
+
 function CountryPage() {
   const [countries, setCountries] = useState();
-  const [singleCountry, setCountry] = useState({
-    name: "United States",
-    profilePicture: "https://www.worldatlas.com/r/w480/img/flag/us-flag.jpg",
-    culture: "banana"
-  });
+  const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-
+  var {name} = useParams();
+  
   useEffect(() => {
     loadCountries();
     getCountriesPoint();
@@ -35,11 +34,15 @@ function CountryPage() {
 
   function loadCountries() {
     API.getCountries()
-      .then((res) => {
-        setCountries(res.data);
-      })
-      .catch((err) => console.log(err));
-  }
+      .then(res => 
+        {
+        setCountries(res.data)
+        }
+      )
+      .catch(err => console.log(err));
+      console.log(name);
+      switchCountry(name);
+  };
 
   function switchCountry(name) {
     API.switchCountry(name)

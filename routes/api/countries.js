@@ -18,11 +18,4 @@ router.get("/specificCountry/:name", (req, res) => {
       .catch(err => res.status(422).json(err));
 })
 
-router.get("/specificCountry/:name", (req, res) => {
-  db.Countries
-      .find( { "name" : req.params.name } )
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-})
-
 module.exports = router;

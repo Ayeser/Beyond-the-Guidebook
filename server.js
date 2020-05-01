@@ -5,9 +5,10 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const MongoStore = require('connect-mongo')(session);
-const passport = require("./passport");
+const passport = require("./passport/index.js");
 const PORT = process.env.PORT || 3300;
 const morgan = require('morgan');
+const Users = require("./models/users");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,12 +23,13 @@ if (process.env.NODE_ENV === "production") {
 // Passport
 app.use(passport.initialize())
 app.use(passport.session()) 
+passport.serializeUser(Users.serializeUser()); 
+passport.deserializeUser(Users.deserializeUser()); 
 
 // Add routes, both API and views
 app.use("/", routes);
 
 // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/beyondtheguidebook");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/beyondtheguidebook");
 
   app.listen(PORT, function() {

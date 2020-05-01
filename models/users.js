@@ -2,13 +2,12 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
 mongoose.promise = Promise;
 
 var usersSchema = new Schema({
-  // email: { type: String, lowercase: true, required: true, match: [/\S+@\S+\.\S+/, 'is invalid'], index: true },
-  // username: { type: String, lowercase: true, unique: true, required: [true, "Please enter a username"], match: [/^[a-zA-Z0-9]+$/, 'is invalid'], index: true }, 
-  email: { type: String },
-  username: { type: String },
+  email: { type: String, lowercase: true, required: true, match: [/\S+@\S+\.\S+/, 'is invalid'], index: true },
+  username: { type: String, lowercase: true, unique: true, required: [true, "Please enter a username"], match: [/^[a-zA-Z0-9]+$/, 'is invalid'], index: true }, 
   password: { type: String },
   bio: { type: String, required: false},
   homeCountry: { type: String, required: false},
@@ -19,26 +18,7 @@ var usersSchema = new Schema({
 });
 
 
-usersSchema.methods = {
-  checkPassword: function (inputPassword) {
-    return bcrypt.compareSync(inputPassword, this.password)
-  },
-  hashPassword: plainTextPassword => {
-    return bcrypt.hashSync(plainTextPassword, 10)
-  }
-};
-
-//hooks for pre-saving
-usersSchema.pre('save', function (next) {
-  if (!this.password) {
-    console.log('models/users.js =======NO PASSWORD PROVIDED ========')
-    next()
-  } else {
-    console.log('models/users.js hashPassword in pre save');
-    this.password = this.hashPassword(this.password);
-    next()
-  }
-})
+usersSchema.plugin(passportLocalMongoose)
 
 const Users = mongoose.model("Users", usersSchema);
 
