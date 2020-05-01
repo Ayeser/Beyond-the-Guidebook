@@ -16,10 +16,10 @@ function Profile() {
       function handleFormSubmit(event) {
           event.preventDefault();
           console.log(formObject.username);
-        API.fortesting(formObject.username)
+        API.getUser(formObject.username)
         .then(res => 
           {
-              console.log(res.data)
+              console.log(res)
         //   setFormObject(res.data[0])
           }
         )

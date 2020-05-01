@@ -6,14 +6,16 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { useParams } from "react-router-dom";
 
 function CountryPage() {
   const [countries, setCountries] = useState();
-  const [singleCountry, setCountry] = useState({name:"United States", profilePicture:"https://www.worldatlas.com/r/w480/img/flag/us-flag.jpg"});
+  const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-
+  var {name} = useParams();
+  
   useEffect(() => {
     loadCountries();
   })
@@ -26,6 +28,8 @@ function CountryPage() {
         }
       )
       .catch(err => console.log(err));
+      console.log(name);
+      switchCountry(name);
   };
 
   function switchCountry(name) {

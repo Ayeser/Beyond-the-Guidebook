@@ -1,37 +1,40 @@
 const router = require("express").Router();
 const db = require("../../models");
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+const mongoose = require("mongoose");
+const jws = require("jws");
+const Users = require('../../models/users'); 
+  
+const LocalStrategy = require('passport-local').Strategy; 
+passport.use(new LocalStrategy(Users.authenticate())); 
 
+router.post('/create', function(req, res) { 
+      
+    UserNew=new Users({email: req.body.email, username : req.body.username, password : req.body.password }); 
+  
+          Users.register(UserNew, req.body.password, function(err, users) { 
+            if (err) { 
+              res.json({success:false, message:"Your account could not be saved. Error: ", err})  
+            }else{ 
+              res.json({success: true, message: "Your account has been saved"}) 
+            } 
+          }); 
+}); 
 
-//creates username
-router.post("/create", (req, res) => {
-  db.Users
-  .create( req.body )
-  .then(dbCreate => res.json(dbCreate))
-      .catch(err => res.status(500).json(err));
-});
-
-//below logs in
-router.post('/login', passport.authenticate('local'),
-(req, res) => {
-    console.log('logged in', req.username);
-    var userInfo = {
-        username: req.user.username
-    };
-    res.send(userInfo);
-}
-);
-
-router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
-    console.log(req.user)
-    if (req.user) {
-        res.json({ user: req.user })
-    } else {
-        res.json({ user: null })
+router.post('/login', function(req, res, next) {
+  passport.authenticate("local", function(err, username, password) {
+    if (err) {
+      return next(err);
     }
+    if (!username) {
+      return res.json({status: 500, data: null, message: "Username/Password combination could not be found"});
+    }
+    if (username.password === req.body.password) {
+      return res.json({status: 201, data: username, message: "Profile successfully found"});
+    }
+  })(req, res, next);
 })
+    
 
 //Edit below to edit the user profile
 router.put("/update/:username", (req, res) => {
@@ -51,19 +54,33 @@ router.post('/logout', (req, res) => {
 })
 
 //Temporarily there is this call to test the profile page
-router.get("/fortesting/:username", (req, res) => {
+router.get("/members/:username", (req, res) => {
     db.Users
         .find( { "username" : req.params.username } )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
   })
 
-  router.put("/editProfile", (req, res) => {
+  router.get("/authorizedMember/:username", (req, res) => {
     db.Users
-        .update( { username: req.username }, req.body )
+        .find( { "username" : req.params.username } )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
-  })
+  });
+
+  router.put("/editProfile", (req, res) => {
+    db.Users
+        .replaceOne( req.body )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+  });
+
+  router.put("/editBio", (req, res) => {
+    db.Users
+        .replaceOne( req.body )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+  });
 
   router.post("/saveComment", (req, res) => {
       db.Comments
