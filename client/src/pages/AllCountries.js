@@ -20,18 +20,7 @@ function CountryPage({name}) {
   useEffect(() => {
     console.log(name)
     loadCountries();
-    // getCountriesPoint(name);
-  },[] );
- 
-  // function getCountriesPoint(name) {
-  //   console.log(singleCountry.name);
-  //   API.getCountriesPoint(singleCountry.name)
-  //     .then((res) => {
-  //       console.log("strirng",res);
-  //       setCountries(res);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
+  },)
 
   function loadCountries() {
     API.getCountries()

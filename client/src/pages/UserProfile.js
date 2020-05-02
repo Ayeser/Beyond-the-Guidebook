@@ -6,12 +6,12 @@ import { Input, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
     function UserProfile(props) {
-        const [userObject, setUserObject] = useState({})
+        const [userObject, setUserObject] = useState({newbio: ""})
         const {username} = useParams();
 
         useEffect(() => {
           loadAuthorizedUser(username);
-        })
+        }, [])
 
         function loadAuthorizedUser(username) {
           API.getUserAlreadyAuthorized(username)
@@ -20,12 +20,12 @@ import API from "../utils/API";
         }
 
     function handleInputChange(event) {
-        const { name, inputValue } = event.target;
-        setUserObject({...userObject, [name]: inputValue})
+        const { name, value } = event.target;
+        setUserObject({...userObject, [name]: value})
       };
 
       function editProfile(event) {
-          console.log("Sending: " + JSON.stringify({"bio" : userObject.newbio}))
+          console.log("Sending: ",  userObject)
         // API.editProfile(userObject)
         // .then(res => 
         //   console.log(res)
@@ -49,32 +49,26 @@ import API from "../utils/API";
              <Row>
              <div><p>Your username is: </p> <Input
                 disabled={true}
-                value={JSON.stringify(username)}
+                value={username}
               /></div>
                        <div><p>Your email is: </p> <Input
                 disabled={true}
                 value={JSON.stringify(userObject.email)}
               /></div>
               </Row> <Row>
-<div><p>Current Bio: </p> <Input
+              <div><p>Bio: </p> <Input
+                onChange={handleInputChange}
+                style={{height: 200}}
                 name="bio"
-                style={{height: 200}}
-                disabled={true}
-                value={JSON.stringify(userObject.bio)}
-              /></div>
-              <div><p>Update Bio: </p> <Input
-                onInputChange={handleInputChange}
-                style={{height: 200}}
-                name="newbio"
+                value={userObject.bio}
                 placeholder="Type new bio here"
               /></div>
-               </Row> <Row>
-              <div><p>Your home country is: </p> <Input
-                onInputChange={handleInputChange}
+                            <div><p>Your home country is: </p> <Input
+                onChange={handleInputChange}
                 name="homeCountry"
                 placeholder={JSON.stringify(userObject.homeCountry)}
               /></div>
-                 </Row> <Row>
+               </Row>  <Row>
   <div><p>Countries you've been to: </p> <Input
                 onChange={handleInputChange}
                 name="placesVisited"
@@ -90,6 +84,9 @@ import API from "../utils/API";
   <FormBtn
                      onClick={editProfile}
                     ><p>Submit profile changes</p></FormBtn>
+                   {/* <FormBtn
+                     onClick={deleteProfile}
+                    ><p>Delete profile completely</p></FormBtn>    */}
       </Container>
     );
     };
