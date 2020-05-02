@@ -5,12 +5,13 @@ import {
   Geography
   // Marker
 } from "react-simple-maps";
-// import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
     
 function MapChart() {
       const [formObject, setFormObject] = useState({});
       const geoUrl =
       "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+      const history = useHistory();
       
       return (
         <>
@@ -33,7 +34,8 @@ function MapChart() {
                   geography={geo}
                   fill="#DDD"
                   stroke="#FFF"
-                  onClick={() => console.log(window.location.replace("/countries/" + geo.properties.NAME_LONG))}
+                  onClick={() => history.push("/countries/" + geo.properties.NAME_LONG)}
+                  // onClick={() => window.location.replace("/countries/" + geo.properties.NAME_LONG)}
                   onMouseOver={() => setFormObject({name: "Hovering over: " + geo.properties.NAME_LONG})}
                   style={{
                     default: {

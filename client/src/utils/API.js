@@ -35,7 +35,7 @@ editProfile: function(req) {
   return axios.put("/api/users/editProfile", {"username": req.username, "bio": req.bio, "homeCountry": req.homeCountry, "placesVisited": req.placesVisited, "placesFuture": req.placesFuture});
 },
 deleteProfile: function(req) {
-  return axios.put("/api/users/deleteProfile", {"username": req.username});
+  return axios.delete("/api/users/deleteProfile", {"username": req.username});
 },
 editBio: function(req) {
   return axios.put("/api/users/editBio", {"username": req.username, "bio": req.bio,});

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MapChart from "../components/MapChart";
 import { Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
+import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 
     function UserProfile(props) {
@@ -11,7 +12,7 @@ import API from "../utils/API";
 
         useEffect(() => {
           loadAuthorizedUser(username);
-        }, [])
+        })
 
         function loadAuthorizedUser(username) {
           API.getUserAlreadyAuthorized(username)
@@ -34,6 +35,15 @@ import API from "../utils/API";
         // event.preventDefault();
       };
 
+      function deleteProfile(event) {
+        event.preventDefault();
+          return API.deleteProfile({
+            username: {username}
+          })
+            .then(console.log("Your profile has been deleted from the database!"))
+            .catch(err => console.log(err));
+        };
+
     return (
       <Container fluid>
 <Row>
@@ -53,7 +63,7 @@ import API from "../utils/API";
               /></div>
                        <div><p>Your email is: </p> <Input
                 disabled={true}
-                value={JSON.stringify(userObject.email)}
+                value={userObject.email}
               /></div>
               </Row> <Row>
               <div><p>Bio: </p> <Input
@@ -84,10 +94,10 @@ import API from "../utils/API";
   <FormBtn
                      onClick={editProfile}
                     ><p>Submit profile changes</p></FormBtn>
-                   {/* <FormBtn
-                     onClick={deleteProfile}
-                    ><p>Delete profile completely</p></FormBtn>    */}
-      </Container>
+                      <DeleteBtn
+                         onClick={deleteProfile}
+                        ><p>Delete profile completely</p></DeleteBtn> 
+      </Container>  
     );
     };
 
