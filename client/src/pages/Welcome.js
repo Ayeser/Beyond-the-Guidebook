@@ -32,7 +32,8 @@ function Welcome() {
       })
       .then(res => {
         if (res.data.status === 500) {
-          alert("Username/Password cannot be found")
+          setFormObject({alert : "**Username/Password cannot be found**"})
+          // alert("Username/Password cannot be found")
         } else if (res.data.status === 201) {
           window.location.replace("/members/" + res.data.data.username)
         }})
@@ -96,6 +97,7 @@ function Welcome() {
               >
                 Login
               </FormBtn>
+              {formObject.alert}
             </form>
             </Col>
             </Row>
