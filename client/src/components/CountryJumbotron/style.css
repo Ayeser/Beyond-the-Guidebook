@@ -1,0 +1,11 @@
+.countryjum {
+    height: 300px;
+    width: 100%;
+    clear: both;
+    padding-top: 120;
+    margin-bottom: 32px;
+    text-align: center;
+    color: black;
+    text-shadow: -2px -2px 0 rgb(252, 251, 251), 2px -2px 0 rgb(252, 251, 251), -2px 2px 0 rgb(252, 251, 251), 2px 2px 0 rgb(252, 251, 251);
+    background-size: cover
+}
