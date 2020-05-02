@@ -68,9 +68,9 @@ router.get("/members/:username", (req, res) => {
         .catch(err => res.status(422).json(err));
   });
 
-  router.put("/deleteProfile", (req, res) => {
+  router.delete("/deleteProfile", (req, res) => {
     db.Users
-        .deleteOne( { "username" : req.params.username } )
+        .deleteOne( { "username" : req.body.username } )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
   });
