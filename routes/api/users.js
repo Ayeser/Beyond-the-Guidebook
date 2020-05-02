@@ -68,6 +68,13 @@ router.get("/members/:username", (req, res) => {
         .catch(err => res.status(422).json(err));
   });
 
+  router.put("/deleteProfile", (req, res) => {
+    db.Users
+        .deleteOne( { "username" : req.params.username } )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+  });
+
   router.put("/editProfile", (req, res) => {
     db.Users
         .replaceOne( req.body )

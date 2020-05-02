@@ -18,7 +18,7 @@ function CountryPage() {
   
   useEffect(() => {
     loadCountries();
-  })
+  },)
 
   function loadCountries() {
     API.getCountries()
