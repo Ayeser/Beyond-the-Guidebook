@@ -2,25 +2,27 @@ import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import CountryJumbotron from "../components/CountryJumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import { Link, useParams} from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Leaves from "../components/Leaves";
 
 
-function CountryPage({name}) {
+function CountryPage() {
   const [countries, setCountries] = useState();
-  const [singleCountry, setCountry] = useState({});
+  const [singleCountry, setCountry] = useState({name:"United States"});
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-
+  const {name} = useParams();
   
   useEffect(() => {
     console.log(name)
     loadCountries();
-  },)
+  },
+  [singleCountry.name]
+  )
 
   function loadCountries() {
     API.getCountries()
@@ -31,24 +33,24 @@ function CountryPage({name}) {
       )
       .catch(err => console.log(err));
       console.log(name);
-      switchCountry(name);
+      // switchCountry(name);
   };
 
-  function switchCountry(name) {
+  // function switchCountry(name) {
     // getCountriesPoint(name);
-    API.switchCountry(name)
-      .then((res) => setCountry(res.data[0]))
-      .catch((err) => console.log(err));
-    API.loadComments(name)
-      .then((res) => setCommentsObject(res.data))
-      .catch((err) => console.log(err));
-    API.loadQuestions(name)
-      .then((res) => setQuestionsObject(res.data))
-      .catch((err) => console.log(err));
+    // API.switchCountry(name)
+    //   .then((res) => setCountry(res.data[0]))
+    //   .catch((err) => console.log(err));
+    // API.loadComments(name)
+    //   .then((res) => setCommentsObject(res.data))
+    //   .catch((err) => console.log(err));
+    // API.loadQuestions(name)
+    //   .then((res) => setQuestionsObject(res.data))
+    //   .catch((err) => console.log(err));
     // API.getCountriesPoint(name)
     //   .then((res) => console.log(res.data))
     //   .catch((err) => console.log(err));
-  }
+  // }
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -103,7 +105,7 @@ function CountryPage({name}) {
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
                   event.preventDefault();
-                  switchCountry(formObject.place);
+                  // switchCountry(formObject.place);
                 }
               }}
             />
@@ -115,7 +117,7 @@ function CountryPage({name}) {
                 <ListItem key={country.name}>
                   <Link
                     to={"/countries/" + country.name}
-                    onClick={() => switchCountry(country.name)}
+                    // onClick={() => switchCountry(country.name)}
                   >
                     <strong>{country.name}</strong>
                   </Link>
