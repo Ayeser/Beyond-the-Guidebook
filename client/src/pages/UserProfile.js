@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import MapChart from "../components/MapChart";
 import { Row, Container } from "../components/Grid";
@@ -9,15 +9,51 @@ import API from "../utils/API";
     function UserProfile(props) {
         const [userObject, setUserObject] = useState({newbio: ""})
         const {username} = useParams();
+        const [formObject, setFormObject] = useState({});
 
         useEffect(() => {
           loadAuthorizedUser(username);
-        })
+        }, [])
 
         function loadAuthorizedUser(username) {
           API.getUserAlreadyAuthorized(username)
           .then(res => setUserObject(res.data[0]))
           .catch(err => console.log(err));
+        }
+
+        function fillInCountries() {
+          if (userObject.placesVisited === undefined) {
+          } else {
+            let fillArr = userObject.placesVisited.split(", ")
+            for (var i =0;i<fillArr.length;i++) {
+              console.log(fillArr[i]);
+              if (document.getElementById(fillArr[i]) === null) {
+              } else {
+                let newDiv = document.getElementById(fillArr[i])
+                newDiv.setAttribute("style", "fill: #FF5722");
+              }
+            }
+          };
+
+          if (userObject.homeCountry === undefined) {
+          } else {
+                let newDiv = document.getElementById(userObject.homeCountry)
+                newDiv.setAttribute("style", "fill: blue");
+              };
+
+          if (userObject.placesFuture === undefined) {
+          } else {
+            let fillArr = userObject.placesFuture.split(", ")
+            for (var i =0;i<fillArr.length;i++) {
+              console.log(fillArr[i]);
+              if (document.getElementById(fillArr[i]) === null) {
+              } else {
+                let newDiv = document.getElementById(fillArr[i])
+                console.log(newDiv);
+                newDiv.setAttribute("style", "fill: green");
+              }
+            }
+          };
         }
 
     function handleInputChange(event) {
@@ -26,28 +62,26 @@ import API from "../utils/API";
       };
 
       function editProfile(event) {
-          console.log("Sending: ",  userObject)
-        // API.editProfile(userObject)
-        // .then(res => 
-        //   console.log(res)
-        // )
-        // .catch(err => console.log(err));
-        // event.preventDefault();
+        API.editProfile(userObject)
+        .then(setFormObject({submitted: "Your profile has now been updated with these new changes!"}))
+        .catch(err => console.log(err));
+        event.preventDefault();
+        fillInCountries()
       };
 
       function deleteProfile(event) {
-        event.preventDefault();
-          return API.deleteProfile({
-            username: {username}
+        API.deleteProfile({
+            username: userObject.username
           })
-            .then(console.log("Your profile has been deleted from the database!"))
+            .then(setFormObject({deleted: "Your profile has been deleted from the database!"}))
             .catch(err => console.log(err));
+            event.preventDefault();
         };
-
+        fillInCountries()
     return (
       <Container fluid>
 <Row>
-    <h1>Map should appear below:</h1>
+    <h1>Profile Page (including map and user profile)</h1>
     </Row><Row>
 <div>
     <MapChart>
@@ -68,15 +102,13 @@ import API from "../utils/API";
               </Row> <Row>
               <div><p>Bio: </p> <Input
                 onChange={handleInputChange}
-                style={{height: 200}}
                 name="bio"
-                value={userObject.bio}
-                placeholder="Type new bio here"
+                placeholder={userObject.bio}
               /></div>
                             <div><p>Your home country is: </p> <Input
                 onChange={handleInputChange}
                 name="homeCountry"
-                placeholder={JSON.stringify(userObject.homeCountry)}
+                placeholder={userObject.homeCountry}
               /></div>
                </Row>  <Row>
   <div><p>Countries you've been to: </p> <Input
@@ -90,13 +122,15 @@ import API from "../utils/API";
                 name="placesFuture"
                 placeholder={userObject.placesFuture}
               /></div>
-               </Row>
+               </Row><Row>
   <FormBtn
                      onClick={editProfile}
-                    ><p>Submit profile changes</p></FormBtn>
+                    ><p>Submit profile changes</p></FormBtn> {formObject.submitted}
+                     </Row><Row>
                       <DeleteBtn
                          onClick={deleteProfile}
-                        ><p>Delete profile completely</p></DeleteBtn> 
+                        ><p>Delete profile completely</p></DeleteBtn> {formObject.deleted}
+                        </Row>
       </Container>  
     );
     };

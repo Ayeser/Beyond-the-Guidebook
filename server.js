@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -26,11 +25,16 @@ app.use(passport.session())
 passport.serializeUser(Users.serializeUser()); 
 passport.deserializeUser(Users.deserializeUser()); 
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/beyondtheguidebook");
+// const connection = mongoose.createConnection(process.env.DB_STRING);
+// const sessionStore = new MongoStore({mongooseConnection: connection, collection: 'sessions' })
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true, cookie: {maxAge: 1000 * 30} }));
+
+
 // Add routes, both API and views
 app.use("/", routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/beyondtheguidebook");
 
   app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
