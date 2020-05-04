@@ -9,7 +9,7 @@ function Nav() {
       <a className="navbar-brand" href="/members">
         Profile Page
       </a>
-      <a className="navbar-brand" href="/countries">
+      <a className="navbar-brand" href="/countries/United%20States">
         Countries Page
       </a>
     </nav>

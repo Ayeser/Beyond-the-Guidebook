@@ -28,24 +28,16 @@ export default {
   },
 
 //For testing purposes here is a call to get user info
-fortesting: function(username) {
-  return axios.get("/api/users/fortesting/" + username);
-},
 editProfile: function(req) {
   return axios.put("/api/users/editProfile", {"username": req.username, "bio": req.bio, "homeCountry": req.homeCountry, "placesVisited": req.placesVisited, "placesFuture": req.placesFuture});
 },
 deleteProfile: function(req) {
-  return axios.put("/api/users/deleteProfile", {"username": req.username});
+  return axios.delete("/api/users/deleteProfile", {"username": req.username});
 },
-editBio: function(req) {
-  return axios.put("/api/users/editBio", {"username": req.username, "bio": req.bio,});
-},
-
 saveComment: function(req) {
   return axios.post("/api/users/saveComment", {"person": req.person, "place": req.place, "advice": req.advice});
 },
 saveQuestion: function(req) {
   return axios.post("/api/users/saveQuestion", {"person": req.person, "place": req.place, "question": req.advice});
 }
-
 };

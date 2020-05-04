@@ -2,23 +2,22 @@ import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import CountryJumbotron from "../components/CountryJumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import { useParams } from "react-router-dom";
 
 function CountryPage() {
-  const [countries, setCountries] = useState();
+  const [countries, setCountries] = useState({});
   const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-  var {name} = useParams();
+  const {name} = useParams();
   
   useEffect(() => {
     loadCountries();
-  },)
+  }, [name]);
 
   function loadCountries() {
     API.getCountries()
@@ -28,8 +27,7 @@ function CountryPage() {
         }
       )
       .catch(err => console.log(err));
-      console.log(name);
-      switchCountry(name);
+      switchCountry(name)
   };
 
   function switchCountry(name) {

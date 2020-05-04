@@ -34,15 +34,6 @@ router.post('/login', function(req, res, next) {
     }
   })(req, res, next);
 })
-    
-
-//Edit below to edit the user profile
-router.put("/update/:username", (req, res) => {
-    db.Users
-    .findOneAndUpdate({ username: req.params.username }, req.body)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-  });
 
 router.post('/logout', (req, res) => {
     if (req.user) {
@@ -68,23 +59,16 @@ router.get("/members/:username", (req, res) => {
         .catch(err => res.status(422).json(err));
   });
 
-  router.put("/deleteProfile", (req, res) => {
+  router.delete("/deleteProfile", (req, res) => {
     db.Users
-        .deleteOne( { "username" : req.params.username } )
+        .deleteMany(  { "username" : req.body.username } )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
   });
 
   router.put("/editProfile", (req, res) => {
     db.Users
-        .replaceOne( req.body )
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-  });
-
-  router.put("/editBio", (req, res) => {
-    db.Users
-        .replaceOne( req.body )
+        .replaceOne( {username: req.body.username}, req.body )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
   });
