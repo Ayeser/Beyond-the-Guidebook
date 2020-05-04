@@ -9,66 +9,84 @@ mongoose.connect(
 const countriesSeed = [
     {
       name: "Afghanistan",
-      culture: "Culture of Afghanistan",
-      description: "Capital city is Kabul",
+      description: "Kabul",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/af-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Pashto, Dari",
+      animal: " National Animal is a Snow Leopard.",
+      currency: "Afghani",
+       
     },
     {
       name: "Albania",
-      culture: "Culture of Albania",
-      description: "Capital city is Tirana",
+      description: "Tirana",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/al-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Albanian",
+      animal: "National Bird is a Golden Eagle.",
+      currency: "Lek",
+
     },
     {
       name: "Algeria",
-      culture: "Culture of Algeria",
-      description: "Capital city is Algiers",
+      description: "Algiers",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/dz-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Arabic",
+      animal: " National Animal is a Fennec Fox.",
+      currency: "Algerian Dinar",
     },
     {
       name: "Andorra",
-      culture: "Culture of Andorra",
-      description: "Capital city is Adorra la Vella",
+      description: "Adorra la Vella",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ad-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Catalan",
+      animal: " Motto: 'Virtus Unita Fortior'(United Virtue is Stronger)",
+      currency: "Euro",
+
     },
     {
       name: "Angola",
-      culture: "Culture of Angola",
-      description: "Capital city is Luanda",
+      description: "Luanda",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ao-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Portuguese",
+      animal: "National Bird is a Mangificent Frigatebird",
+      currency: "Kwanza",
     },
     {
       name: "Antigue and Barbuda",
-      culture: "Culture of Antigue and Barbuda",
-      description: "Capital city is St. John's",
+      description: "St. John's",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ag-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: " Languages: English",
+      animal: "National Animal is a European Fallow Deer",
+      currency: "East Caribbean Dollar",
     },
     {
       name: "Argentina",
       culture: "Culture of Argentina",
       description: "Capital city is Buenos Aires",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ar-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: " Languages: Spanish",
     },
     {
       name: "Armenia",
       culture: "Culture of Armneia",
       description: "Capital city is Yerevan",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/am-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: " Languages: Armenian",
     },
     {
       name: "Australia",
       culture: "Culture of Australia",
       description: "Capital city is Canberra",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/au-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: " Languages: English ",
     },
     {
       name: "Austria",
