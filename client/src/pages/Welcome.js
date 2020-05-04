@@ -20,7 +20,7 @@ function Welcome() {
         email: formObject.createEmail,
         password: formObject.createPassword
       })
-        .then(console.log("Create an account request sent!"))
+        .then(setFormObject({message : "Congratulations, account created! You may now log in."}))
         .catch(err => console.log(err));
     };
 
@@ -75,6 +75,7 @@ function Welcome() {
               >
                 Create Account
               </FormBtn>
+              {formObject.message}
             </form>
             </Col>
             <Col size="md-6 sm-6">

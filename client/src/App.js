@@ -26,7 +26,7 @@ function App() {
         </Route>
         {/* Path for /members is to show an example */}
         <Route exact path={"/members"}>
-        <h1>This page is restricted to users who are signed in: please go to the main page and type in your username and password</h1>
+        <Welcome />
         </Route>
         <Route exact path={"/members/:username"}>
         <UserProfile />
