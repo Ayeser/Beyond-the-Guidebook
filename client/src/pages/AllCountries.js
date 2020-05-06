@@ -5,7 +5,9 @@ import API from "../utils/API";
 import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import "../pages/AllCountries.css"
 
 function CountryPage() {
   const [countries, setCountries] = useState({});
@@ -13,7 +15,7 @@ function CountryPage() {
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-  const {name} = useParams();
+  const {name, username} = useParams();
   
   useEffect(() => {
     loadCountries();
@@ -27,7 +29,7 @@ function CountryPage() {
         }
       )
       .catch(err => console.log(err));
-      switchCountry(name)
+      switchCountry(name);
   };
 
   function switchCountry(name) {
@@ -71,10 +73,13 @@ function CountryPage() {
 
     return (
       <Container fluid>
+              <Nav username={username} />
 <Row>
 <CountryJumbotron>
+              <div className = "Flag">
               <h1>{singleCountry.name}</h1>
               <img src={singleCountry.profilePicture} alt="Country Flag" />
+              </div>
             </CountryJumbotron>
   </Row>
   <Row>
@@ -112,27 +117,40 @@ function CountryPage() {
 <Col size="md-10 sm-8">
 <Row>
           <Col size="md-5 sm-8">
+            <div className= "CultureboxA">
             <Jumbotron>
-              <h1>Culture Box #1</h1>
-              <p>{singleCountry.culture}</p>
+
+            <h1 id='Capital'>Capital city is:</h1>
+            <h2>{singleCountry.description}</h2>
+        
             </Jumbotron>
+            </div>
             </Col><Col size="md-5 sm-8">
+            <div className= "CultureboxA Culturebox">
             <Jumbotron>
-              <h1>Culture Box #2</h1>
-              {singleCountry.description}
+            <h1>Languages:</h1>
+            <h2>{singleCountry.languages}</h2>
+            
             </Jumbotron>
+            </div>
             </Col>
             </Row>
             <Row>
             <Col size="md-5 sm-8">
+              <div className= "Culturebox">
             <Jumbotron>
-              <h1>Culture Box #3</h1>
+              <h1>Fun Fact:</h1>
+            <h2>{singleCountry.animal}</h2>
             </Jumbotron>
+            </div>
             </Col>
             <Col size="md-5 sm-8">
+              <div className= "Culturebox">
             <Jumbotron>
-              <h1>Culture Box #4</h1>
+              <h1>Currency:</h1>
+            <h2>{singleCountry.currency}</h2>
             </Jumbotron>
+            </div>
             </Col>
             </Row>
             <Row>

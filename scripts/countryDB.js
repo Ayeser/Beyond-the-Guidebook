@@ -9,123 +9,163 @@ mongoose.connect(
 const countriesSeed = [
     {
       name: "Afghanistan",
-      culture: "Culture of Afghanistan",
-      description: "Capital city is Kabul",
+      description: "Kabul",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/af-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Pashto, Dari",
+      animal: " National Animal is a Snow Leopard.",
+      currency: "Afghani",
+       
     },
     {
       name: "Albania",
-      culture: "Culture of Albania",
-      description: "Capital city is Tirana",
+      description: "Tirana",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/al-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Albanian",
+      animal: "National Bird is a Golden Eagle.",
+      currency: "Lek",
+
     },
     {
       name: "Algeria",
-      culture: "Culture of Algeria",
-      description: "Capital city is Algiers",
+      description: "Algiers",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/dz-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Arabic",
+      animal: " National Animal is a Fennec Fox.",
+      currency: "Algerian Dinar",
     },
     {
       name: "Andorra",
-      culture: "Culture of Andorra",
-      description: "Capital city is Adorra la Vella",
+      description: "Adorra la Vella",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ad-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Catalan",
+      animal: " Motto: 'Virtus Unita Fortior'(United Virtue is Stronger)",
+      currency: "Euro",
+
     },
     {
       name: "Angola",
-      culture: "Culture of Angola",
-      description: "Capital city is Luanda",
+      description: "Luanda",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ao-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Portuguese",
+      animal: "National Bird is a Mangificent Frigatebird",
+      currency: "Kwanza",
     },
     {
       name: "Antigue and Barbuda",
-      culture: "Culture of Antigue and Barbuda",
-      description: "Capital city is St. John's",
+      description: "St. John's",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ag-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "English",
+      animal: "National Animal is a European Fallow Deer",
+      currency: "East Caribbean Dollar",
     },
     {
       name: "Argentina",
-      culture: "Culture of Argentina",
-      description: "Capital city is Buenos Aires",
+      description: "Buenos Aires",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ar-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Spanish",
+      animal: "National Dance is the Tango.",
+      currency: "Argentina Peso",
+
     },
     {
       name: "Armenia",
-      culture: "Culture of Armneia",
-      description: "Capital city is Yerevan",
+      description: "Yerevan",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/am-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Armenian",
+      animal: " National Fruit is an Apricot.",
+      currency: "Dram",
     },
     {
       name: "Australia",
-      culture: "Culture of Australia",
-      description: "Capital city is Canberra",
+      description: "Canberra",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/au-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "English",
+      animal: " National Tree is a Golden Wattle.",
+      currency: "Australian Dollar",
     },
     {
       name: "Austria",
-      culture: "Culture of Austria",
-      description: "Capital city is Vienna",
+      description: "Vienna",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/at-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages:"German",
+      animal: " National Flower is Gentiana",
+      currency: "Euro",
     },
 
     {
       name: "Azerbaijan",
-      culture: "Culture of Azerbaijan",
-      description: "Capital city is Baku",
+      description: "Baku",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/az-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Azerbaijani",
+      animal: "National Animal is Karabakh horse.",
+      currency: "Manat",
     },
     {
       name: "Bahamas",
-      culture: "Culture of Bahamas",
-      description: "Capital city is Nassau",
+      description: "Nassau",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bs-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "English",
+      animal: "National Fish is a Blue Marlin.",
+      currency: "Bahamian Dollar",
+      
     },
     {
       name: "Bahrain",
-      culture: "Culture of Bahrain",
-      description: "Capital city is Manama",
+      description: "Manama",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bh-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Arabic",
+      animal: " National Bird is a White-cheeked Bulbul",
+      currency: "Bahraini Dinar",
     },
     {
       name: "Bangladesh",
-      culture: "Culture of Bangladesh",
-      description: "Capital city is Dhaka",
+      description: "Dhaka",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bd-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Bangla",
+      animal: "National Flower is a Water Lily.",
+      currency: "Taka",
     },
     {
       name: "Barbados",
-      culture: "Culture of Barbados",
-      description: "Capital city is Bridgetown",
+      description: "Bridgetown",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bb-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: " English",
+      animal: "Motto: Pride and Industry.",
+      currency: "Barbadian Dollar",
     },
     {
       name: "Belarus",
-      culture: "Culture of Belarus",
-      description: "Capital city is Minsk",
+      description: "Minsk",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/by-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Belarusian",
+      animal:"National Animal is Wisent(European Bison)",
+      currency: "Blearusian Ruble",
     },
     {
       name: "Belgium",
-      culture: "Culture of Belgium",
-      description: "Capital city is Brussels",
+      description: "Brussels",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/be-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Dutch",
+      animal: "National Animal is a Lion.",
+      currency: "Euro",
+
     },
     {
       name: "Belize",
@@ -136,52 +176,66 @@ const countriesSeed = [
     },
     {
       name: "Benin",
-      culture: "Culture of Benin",
-      description: "Capital city is Porto=Novo",
+      description: "Porto=Novo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bj-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "English",
+      animal: " National Animal is a Tapir.",
+      currency: "Belizean Dollar",
     },
     {
       name: "Bhutan",
-      culture: "Culture of Bhutan",
-      description: "Capital city is Thimphu",
+      description: "Thimphu",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bt-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Dzongkha",
+      animal: " National Sport is Archery.",
+      currency: "Ngultrum",
+      
     },
     {
       name: "Bolivia",
-      culture: "Culture of Bolivia",
-      description: "Capital city is La Paz",
+      description: "La Paz",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bo-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Spanish, Quechua, Aymara",
+      animal: "National Animal is a Llama.",
+      currency: "Bolivia Boliviano",
     },
     {
       name: "Bosnia and Herzegovina",
-      culture: "Culture of Bosnia and Herzegovina",
-      description: "Capital city is Sarajevo",
+      description: "Sarajevo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ba-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Bosnian,Coratian, Serbian",
+      animal: "National Flower is a Bosnian Lily.",
+      currency: "Bosnia and Herzegovian Convertiable Mark",
     },
     {
       name: "Botswana",
-      culture: "Culture of Botswana",
-      description: "Capital city is Gaborone",
+      description: "Gaborone",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bw-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Setswana, Kalanga, Sekgalagadi, English",
+      animal: "National animal is the Zebra.",
+      currency: "Pula",
     },
     {
       name: "Brazil",
-      culture: "Culture of Brazil",
-      description: "Capital city is Brasilia",
+      description: "Brasilia",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/br-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Portuguese",
+      animal: "Motto: 'Ordem e Progresso' 'Order and Progress'",
+      currency: "Brazil Real",
+
     },
     {
       name: "Brunei Darussalam",
-      culture: "Culture of Brunei Darussalam",
-      description: "Capital city is Bandar Seri Begawan",
+      description: "Bandar Seri Begawan",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bn-flag.jpg",
-      date: new Date(Date.now())
+      date: new Date(Date.now()),
+      languages: "Mayla"
     },
     {
       name: "Bulgaria",
@@ -989,7 +1043,7 @@ const countriesSeed = [
       date: new Date(Date.now())
     },
     {
-      name: "Russia",
+      name: "Russian Federation",
       culture: "Culture of Russia",
       description: "Capital city is Moscow",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ru-flag.jpg",
