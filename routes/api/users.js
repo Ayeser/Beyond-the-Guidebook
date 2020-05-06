@@ -68,7 +68,7 @@ router.get("/members/:username", (req, res) => {
 
   router.put("/editProfile", (req, res) => {
     db.Users
-        .replaceOne( {username: req.body.username}, req.body )
+        .update( {username: req.body.username}, req.body )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
   });
