@@ -5,6 +5,7 @@ import API from "../utils/API";
 import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "../pages/AllCountries.css"
 
@@ -14,7 +15,7 @@ function CountryPage() {
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-  const {name} = useParams();
+  const {name, username} = useParams();
   
   useEffect(() => {
     loadCountries();
@@ -28,7 +29,7 @@ function CountryPage() {
         }
       )
       .catch(err => console.log(err));
-      switchCountry(name)
+      switchCountry(name);
   };
 
   function switchCountry(name) {
@@ -72,6 +73,7 @@ function CountryPage() {
 
     return (
       <Container fluid>
+              <Nav username={username} />
 <Row>
 <CountryJumbotron>
               <div className = "Flag">

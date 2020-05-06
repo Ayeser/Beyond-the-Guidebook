@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MapChart from "../components/MapChart";
 import { Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
+import Nav from "../components/Nav";
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 
@@ -37,20 +38,22 @@ import API from "../utils/API";
 
           if (userObject.homeCountry === undefined) {
           } else {
-                let newDiv = document.getElementById(userObject.homeCountry)
-                newDiv.setAttribute("style", "fill: blue");
+            if (document.getElementById(userObject.homeCountry) === null) {
+            } else {
+              let homeDiv = document.getElementById(userObject.homeCountry)
+                homeDiv.setAttribute("style", "fill: blue");
+            }
               };
 
           if (userObject.placesFuture === undefined) {
           } else {
             let fillArr = userObject.placesFuture.split(", ")
-            for (var i =0;i<fillArr.length;i++) {
-              console.log(fillArr[i]);
-              if (document.getElementById(fillArr[i]) === null) {
+            for (var j =0;j<fillArr.length;j++) {
+              console.log(fillArr[j]);
+              if (document.getElementById(fillArr[j]) === null) {
               } else {
-                let newDiv = document.getElementById(fillArr[i])
-                console.log(newDiv);
-                newDiv.setAttribute("style", "fill: green");
+                let futureDiv = document.getElementById(fillArr[j])
+                futureDiv.setAttribute("style", "fill: green");
               }
             }
           };
@@ -77,14 +80,15 @@ import API from "../utils/API";
             .catch(err => console.log(err));
             event.preventDefault();
         };
-        fillInCountries()
+fillInCountries();
     return (
       <Container fluid>
+        <Nav />
 <Row>
     <h1>Profile Page (including map and user profile)</h1>
     </Row><Row>
 <div>
-    <MapChart>
+    <MapChart username={username}>
         <h3>The map below may be filled in with countries marked different colors</h3>
     </MapChart>
 

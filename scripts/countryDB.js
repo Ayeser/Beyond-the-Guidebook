@@ -1043,7 +1043,7 @@ const countriesSeed = [
       date: new Date(Date.now())
     },
     {
-      name: "Russia",
+      name: "Russian Federation",
       culture: "Culture of Russia",
       description: "Capital city is Moscow",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ru-flag.jpg",
