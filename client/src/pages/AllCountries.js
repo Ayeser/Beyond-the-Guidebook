@@ -15,7 +15,7 @@ function CountryPage() {
   const [formObject, setFormObject] = useState({});
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
-  const {name, username} = useParams();
+  const {name, username, id} = useParams();
   
   useEffect(() => {
     loadCountries();
@@ -73,7 +73,7 @@ function CountryPage() {
 
     return (
       <Container fluid>
-              <Nav username={username} />
+              <Nav username={username} id={id} />
 <Row>
 <CountryJumbotron>
               <div className = "Flag">
@@ -158,15 +158,15 @@ function CountryPage() {
             <form>
             <h2>What "beyond the guidebook" advice can you offer a prospective traveller to this country?</h2>
               <Input
-                onChange={handleInputChange}
+                disabled={true}
+                value={username}
                 name="author"
-                placeholder="Author (required)"
 
               />
               <TextArea
                 onChange={handleInputChange}
                 name="comment"
-                placeholder="Comment would go here"
+                placeholder="Type comment here"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.comment)}
@@ -194,9 +194,9 @@ function CountryPage() {
             <form>
             <h2>Have any questions about the culture of this country?</h2>
               <Input
-                onChange={handleInputChange}
+                  disabled={true}
+                  value={username}
                 name="questioner"
-                placeholder="Author (required)"
 
               />
               <TextArea
