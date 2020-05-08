@@ -1944,9 +1944,9 @@ const countriesSeed = [
       description: "This is a Dependent Territory. Capital city is Pago Pago",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/as-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
+      languages: "Samoan, English",
       animal: "Fruit Bat",
-      currency: ""
+      currency: "Tala"
     },
     {
       name: "Anguilla",
@@ -1974,7 +1974,7 @@ const countriesSeed = [
       description: "This is a Dependent Territory. Capital city is Hamilton",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
+      languages: "English",
       animal: "Humpback Whale",
       currency: ""
     },
