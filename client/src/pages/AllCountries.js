@@ -16,7 +16,8 @@ function AllCountries() {
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
   const {name, username, id} = useParams();
-  var name = "China";
+  
+  setCountry({name: name});
 
   useEffect(() => {
     loadCountries();
