@@ -19,14 +19,13 @@ function App() {
       <Route exact path={"/"}>
         <Welcome />
         </Route>
-        <Route exact path={"/countries/:name/:username"}>
+        <Route exact path={"/countries/:name/:username/:id"}>
         <AllCountries />
         </Route>
-        {/* Path for /members is to show an example */}
-        <Route exact path={"/members"}>
+        <Route exact path={["/members", "/countries", "/countries/:name", "/members/:username"]}>
         <Welcome />
         </Route>
-        <Route exact path={"/members/:username"}>
+        <Route exact path={"/members/:username/:id"}>
         <UserProfile />
         </Route>
       <Route>
