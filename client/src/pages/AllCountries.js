@@ -77,7 +77,8 @@ function CountryPage() {
 <Row>
 <CountryJumbotron>
               <div className = "Flag">
-              <h1>{singleCountry.name}</h1>
+              {/* <h1>{singleCountry.name}</h1> */}
+              <h1>{name}</h1>
               <img src={singleCountry.profilePicture} alt="Country Flag" />
               </div>
             </CountryJumbotron>
