@@ -51,7 +51,6 @@ function AllCountries() {
   };
 
   function handleFormSubmitAdvice(event) {
-    event.preventDefault();
       return API.saveComment({
         person: username,
         place: name,
@@ -62,7 +61,6 @@ function AllCountries() {
     };
 
   function handleFormSubmitQuestion(event) {
-    event.preventDefault();
     return API.saveQuestion({
       person: username,
       place: name,
@@ -177,8 +175,8 @@ function AllCountries() {
                 onClick={function(event) {handleFormSubmitAdvice(event)}}
               >
                 Submit Comment
-                {alertObject.advice}
               </FormBtn>
+                     <p>{alertObject.advice}</p>
             </form>
 
             {commentsObject && commentsObject.length  > 0 ? (
@@ -213,8 +211,8 @@ function AllCountries() {
                 onClick={function(event) {handleFormSubmitQuestion(event)}}
               >
                 Submit Question
-                {alertObject.question}
               </FormBtn>
+              <p>{alertObject.question}</p>
             </form>
             {questionsObject && questionsObject.length  > 0 ? (
               <List>
