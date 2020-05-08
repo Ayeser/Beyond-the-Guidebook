@@ -172,7 +172,7 @@ function AllCountries() {
                 placeholder="Type comment here"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.comment)}
+                disabled={!(formObject.comment)}
                 onClick={handleFormSubmitAdvice}
               >
                 Submit Comment
@@ -208,7 +208,7 @@ function AllCountries() {
                 placeholder="Question here"
               />
               <FormBtn
-                disabled={!(formObject.questioner && formObject.question)}
+                disabled={!formObject.question)}
                 onClick={handleFormSubmitQuestion}
               >
                 Submit Question
