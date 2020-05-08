@@ -18,6 +18,7 @@ function CountryPage() {
   const {name, username, id} = useParams();
   
   useEffect(() => {
+    console.log(name);
     loadCountries();
   }, [name]);
 
