@@ -17,9 +17,9 @@ function AllCountries() {
   const [questionsObject, setQuestionsObject] = useState({});
   const {name, username, id} = useParams();
   
-  useEffect(() => {
+  // useEffect(() => {
     loadCountries();
-  }, []);
+  // }, []);
 
   function loadCountries() {
     API.getCountries()
@@ -29,6 +29,7 @@ function AllCountries() {
         }
       )
       .catch(err => console.log(err));
+      switchCountry(name);
   };
 
   function switchCountry(name) {
@@ -41,8 +42,7 @@ function AllCountries() {
       API.loadQuestions(name)
       .then(res => setQuestionsObject(res.data))
       .catch(err => console.log(err));
-  }
-  switchCountry(name);
+  };
 
   function handleInputChange(event) {
     const { name, value } = event.target;
