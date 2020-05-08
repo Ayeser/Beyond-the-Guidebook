@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
-// import "../pages/AllCountries.css"
+import "../pages/AllCountries.css"
 
 function AllCountries() {
   const [countries, setCountries] = useState({});
@@ -16,10 +16,11 @@ function AllCountries() {
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
   const {name, username, id} = useParams();
-  
-  // useEffect(() => {
+  var name = "China";
+
+  useEffect(() => {
     loadCountries();
-  // }, []);
+  }, []);
 
   function loadCountries() {
     API.getCountries()
