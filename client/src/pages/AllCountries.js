@@ -176,7 +176,7 @@ function AllCountries() {
                 disabled={!formObject.advice}
                 onClick={function(event) {handleFormSubmitAdvice(event)}}
               >
-                "Submit Comment"
+                Submit Comment
                 {alertObject.advice}
               </FormBtn>
             </form>
@@ -212,7 +212,7 @@ function AllCountries() {
                 disabled={!formObject.question}
                 onClick={function(event) {handleFormSubmitQuestion(event)}}
               >
-                "Submit Question"
+                Submit Question
                 {alertObject.question}
               </FormBtn>
             </form>
