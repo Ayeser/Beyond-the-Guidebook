@@ -139,7 +139,7 @@ function CountryPage() {
             <Col size="md-5 sm-8">
               <div className= "Culturebox">
             <Jumbotron>
-              <h1>Fun Fact:</h1>
+              <h1>National Animal (or fun fact):</h1>
             <h2>{singleCountry.animal}</h2>
             </Jumbotron>
             </div>

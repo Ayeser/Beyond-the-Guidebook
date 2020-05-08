@@ -51,7 +51,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ao-flag.jpg",
       date: new Date(Date.now()),
       languages: "Portuguese",
-      animal: "National Bird is a Mangificent Frigatebird",
+      animal: "National Bird is a Red-crested Turaco",
       currency: "Kwanza"
     },
     {
@@ -171,7 +171,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bz-flag.jpg",
       date: new Date(Date.now()),
       languages: "English",
-      animal: "",
+      animal: "Tapir",
       currency: "Belize Dollar"
     },
     {
@@ -235,7 +235,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bn-flag.jpg",
       date: new Date(Date.now()),
       languages: "Mayla",
-      animal: "",
+      animal: "White-bellied Sea Eagle",
       currency: "Brunei Dollar"
     },
     {
@@ -245,7 +245,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bg-flag.jpg",
       date: new Date(Date.now()),
       languages: "Bulgarian",
-      animal: "",
+      animal: "Lion",
       currency: "Lev"
     },
     {
@@ -255,7 +255,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bf-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "White Stallion",
       currency: "West African CFA Franc"
     },
     {
@@ -264,9 +264,9 @@ const countriesSeed = [
       description: "Capital city is Nay Pyi Taw",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Burmese",
+      animal: "Green Peafowl",
+      currency: "Burmese Kyat"
     },
     {
       name: "Burundi",
@@ -275,7 +275,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bi-flag.jpg",
       date: new Date(Date.now()),
       languages: "Kirundi; French",
-      animal: "",
+      animal: "Lion",
       currency: "Burundi Franc"
     },
     {
@@ -285,7 +285,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kh-flag.jpg",
       date: new Date(Date.now()),
       languages: "Khmer",
-      animal: "",
+      animal: "Kouprey",
       currency: "Riel"
     },
     {
@@ -295,7 +295,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cm-flag.jpg",
       date: new Date(Date.now()),
       languages: "French; English",
-      animal: "",
+      animal: "Lion",
       currency: "Central African CFA Franc"
     },
     {
@@ -305,7 +305,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ca-flag.jpg",
       date: new Date(Date.now()),
       languages: "English; French",
-      animal: "",
+      animal: "North American Beaver",
       currency: "Canadian Dollar"
     },
     {
@@ -315,7 +315,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cv-flag.jpg",
       date: new Date(Date.now()),
       languages: "Portuguese",
-      animal: "",
+      animal: "Manatees",
       currency: "Cape Verdean Escudo"
     },
     {
@@ -325,7 +325,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cf-flag.jpg",
       date: new Date(Date.now()),
       languages: "Sango; French",
-      animal: "",
+      animal: "African Elephant",
       currency: "Central African CFA Franc"
     },
     {
@@ -335,7 +335,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/td-flag.jpg",
       date: new Date(Date.now()),
       languages: "French; Arabic",
-      animal: "",
+      animal: "North: goat, South: lion",
       currency: "Central African CFA Franc"
     },
     {
@@ -345,7 +345,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cl-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "Huemul",
       currency: "Chilean Peso"
     },
     {
@@ -355,7 +355,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cn-flag.jpg",
       date: new Date(Date.now()),
       languages: "Mandarin",
-      animal: "",
+      animal: "Giant Panda",
       currency: "Chinese Yuan"
     },
     {
@@ -365,7 +365,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/co-flag.jpg",
       date: new Date(Date.now()),
       languages: "spanish",
-      animal: "",
+      animal: "Andean Condor",
       currency: "Colombian Peso"
     },
     {
@@ -375,7 +375,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/km-flag.jpg",
       date: new Date(Date.now()),
       languages: "Comorian; Arabic; French",
-      animal: "",
+      animal: "Mongoose Lemur",
       currency: "Comorian Franc"
     },
     {
@@ -385,7 +385,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cg-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "Okapi",
       currency: "Central African CFA Franc"
     },
     {
@@ -395,7 +395,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cr-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "White-tailed Deer",
       currency: "Colon"
     },
     {
@@ -405,7 +405,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ci-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "Elephant",
       currency: "West African CFA Franc"
     },
     {
@@ -415,7 +415,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/hr-flag.jpg",
       date: new Date(Date.now()),
       languages: "Kuna",
-      animal: "",
+      animal: "Pine Marten",
       currency: "Croatian"
     },
     {
@@ -425,7 +425,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cu-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "Cuban Trogon",
       currency: "Cuban Peso"
     },
     {
@@ -435,7 +435,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cy-flag.jpg",
       date: new Date(Date.now()),
       languages: "Greek; Turkish",
-      animal: "",
+      animal: "Cypriot Mouflon",
       currency: "Euro"
     },
     {
@@ -445,7 +445,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cz-flag.jpg",
       date: new Date(Date.now()),
       languages: "Czech; Slovak",
-      animal: "",
+      animal: "Double-tailed Lion",
       currency: "Czech Koruna"
     },
     {
@@ -455,7 +455,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/cd-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "Okapi",
       currency: "Congolese Franc"
     },
     {
@@ -465,7 +465,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/dk-flag.jpg",
       date: new Date(Date.now()),
       languages: "Danish",
-      animal: "",
+      animal: "Red Squirrel",
       currency: "Danish Krone"
     },
     {
@@ -475,7 +475,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/dj-flag.jpg",
       date: new Date(Date.now()),
       languages: "Arabic; French",
-      animal: "",
+      animal: "Elk",
       currency: "Djiboutian Franc"
     },
     {
@@ -485,7 +485,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/dm-flag.jpg",
       date: new Date(Date.now()),
       languages: "English; French; Antillean Creole",
-      animal: "",
+      animal: "National Bird of Dominca is Sisserou Parrot",
       currency: "East Caribbean Dollar"
     },
     {
@@ -495,7 +495,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/do-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "National Bird is Palmchat",
       currency: "Dominican Peso"
     },
     {
@@ -505,7 +505,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ec-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "Andean Condor",
       currency: "United States Dollar"
     },
     {
@@ -515,7 +515,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/eg-flag.jpg",
       date: new Date(Date.now()),
       languages: "Arabic",
-      animal: "",
+      animal: "Steppe Eagle",
       currency: "Egyptian Pound"
     },
     {
@@ -525,7 +525,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sv-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "Motmot",
       currency: "United States Dollar"
     },
     {
@@ -535,7 +535,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gq-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish; French; Portuguese",
-      animal: "",
+      animal: "Giraffe",
       currency: "Central African FCA Franc"
     },
     {
@@ -545,7 +545,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/er-flag.jpg",
       date: new Date(Date.now()),
       languages: "Arabic; Tingrinya; English",
-      animal: "",
+      animal: "Arabian Camel",
       currency: "Nakfa"
     },
     {
@@ -555,7 +555,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ee-flag.jpg",
       date: new Date(Date.now()),
       languages: "Estonian",
-      animal: "",
+      animal: "Wolf",
       currency: "Estonian Kroon; Euro"
     },
     {
@@ -565,7 +565,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/et-flag.jpg",
       date: new Date(Date.now()),
       languages: "Amharic",
-      animal: "",
+      animal: "Lion",
       currency: "Birr"
     },
     {
@@ -575,7 +575,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/fj-flag.jpg",
       date: new Date(Date.now()),
       languages: "English; Bau Fijian; Hindi",
-      animal: "",
+      animal: "Fiji Banded Iquana",
       currency: "Fijian Dollar"
     },
     {
@@ -585,7 +585,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/fi-flag.jpg",
       date: new Date(Date.now()),
       languages: "Finnish; Swedish",
-      animal: "",
+      animal: "Brown Bear",
       currency: "Euro"
     },
     {
@@ -595,7 +595,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/fr-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "Gallic Rooster",
       currency: "Euro; CFP Franc"
     },
     {
@@ -605,7 +605,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ga-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "Black Panther",
       currency: "Central African CFA Franc"
     },
     {
@@ -615,7 +615,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gm-flag.jpg",
       date: new Date(Date.now()),
       languages: "English",
-      animal: "",
+      animal: "Lion",
       currency: "Dalasi"
     },
     {
@@ -625,7 +625,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ge-flag.jpg",
       date: new Date(Date.now()),
       languages: "Georgian",
-      animal: "",
+      animal: "White-tailed Deer",
       currency: "Lari"
     },
     {
@@ -635,7 +635,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/de-flag.jpg",
       date: new Date(Date.now()),
       languages: "German",
-      animal: "",
+      animal: "Bundesadler",
       currency: "Euro"
     },
     {
@@ -645,7 +645,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gh-flag.jpg",
       date: new Date(Date.now()),
       languages: "English",
-      animal: "",
+      animal: "Tawny Eagle",
       currency: "Ghanaian Cedi"
     },
     {
@@ -655,7 +655,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gr-flag.jpg",
       date: new Date(Date.now()),
       languages: "Greek",
-      animal: "",
+      animal: "Dolphin",
       currency: "Euro"
     },
     {
@@ -665,7 +665,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gd-flag.jpg",
       date: new Date(Date.now()),
       languages: "English; Patois",
-      animal: "",
+      animal: "Grenada Dove",
       currency: "East Caribbean Dollar"
     },
     {
@@ -675,7 +675,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gt-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "Quetzal",
       currency: "Quetzal"
     },
     {
@@ -685,7 +685,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gn-flag.jpg",
       date: new Date(Date.now()),
       languages: "French",
-      animal: "",
+      animal: "National Bird is Raggiana Bird of Paradise",
       currency: "Guinean Franc"
     },
     {
@@ -695,7 +695,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gw-flag.jpg",
       date: new Date(Date.now()),
       languages: "Portuguese",
-      animal: "",
+      animal: "Not Declared",
       currency: "West African CFA Franc"
     },
     {
@@ -705,7 +705,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gy-flag.jpg",
       date: new Date(Date.now()),
       languages: "English",
-      animal: "",
+      animal: "Jaguar",
       currency: "Guyanese Dollar"
     },
     {
@@ -715,7 +715,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ht-flag.jpg",
       date: new Date(Date.now()),
       languages: "Haitian Creole; French",
-      animal: "",
+      animal: "Hispaniolan Trogons is the National Bird",
       currency: "Gourde"
     },
     {
@@ -725,7 +725,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/hn-flag.jpg",
       date: new Date(Date.now()),
       languages: "Spanish",
-      animal: "",
+      animal: "White-tailed Deer",
       currency: "Lempira"
     },
     {
@@ -735,7 +735,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/hu-flag.jpg",
       date: new Date(Date.now()),
       languages: "Hungarian",
-      animal: "",
+      animal: "Turul",
       currency: "Forint"
     },
     {
@@ -745,7 +745,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/is-flag.jpg",
       date: new Date(Date.now()),
       languages: "Icelandic",
-      animal: "",
+      animal: "Gyrfalcon",
       currency: "Icelandic Krona"
     },
     {
@@ -754,9 +754,9 @@ const countriesSeed = [
       description: "Capital city is New Delhi",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/in-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Hindi; English",
+      animal: "Royal Bengal Tiger",
+      currency: "Indian Rupee"
     },
     {
       name: "Indonesia",
@@ -764,9 +764,9 @@ const countriesSeed = [
       description: "Capital city is Jakarta",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/id-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Indonesian",
+      animal: "Komodo Dragon",
+      currency: "Rupiah"
     },
     {
       name: "Iran",
@@ -774,9 +774,9 @@ const countriesSeed = [
       description: "Capital city is Tehran",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ir-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Persian",
+      animal: "Asiatic Lion",
+      currency: "Rial"
     },
     {
       name: "Iraq",
@@ -784,9 +784,9 @@ const countriesSeed = [
       description: "Capital city is Baghdad",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/iq-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic; Kurdish",
+      animal: "Goat",
+      currency: "Iraqi Dinar"
     },
     {
       name: "Ireland",
@@ -794,9 +794,9 @@ const countriesSeed = [
       description: "Capital city is Dublin",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ie-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Irish",
+      animal: "Red Deer",
+      currency: "Euro"
     },
     {
       name: "Israel",
@@ -804,9 +804,9 @@ const countriesSeed = [
       description: "Capital city is Jerusalem",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/il-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Hebrew; Arabic",
+      animal: "National Bird is Hoopoe",
+      currency: "Shekel"
     },
     {
       name: "Italy",
@@ -814,9 +814,9 @@ const countriesSeed = [
       description: "Capital city is Rome",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/it-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Italian",
+      animal: "Italian Wolf",
+      currency: "Euro"
     },
     {
       name: "Jamaica",
@@ -824,9 +824,9 @@ const countriesSeed = [
       description: "Capital city is Kingston",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/jm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Red-billed Streamertail",
+      currency: "Jamaican Dollar"
     },
     {
       name: "Japan",
@@ -834,9 +834,9 @@ const countriesSeed = [
       description: "Capital city is Tokyo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/jp-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Japanese",
+      animal: "Green Pheasant is national bird",
+      currency: "Yen"
     },
     {
       name: "Jordan",
@@ -844,9 +844,9 @@ const countriesSeed = [
       description: "Capital city is Amman",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/jo-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Oryx",
+      currency: "Jordanian Dinar"
     },
     {
       name: "Kazakhstan",
@@ -854,9 +854,9 @@ const countriesSeed = [
       description: "Capital city is Astana",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Kazakh; Russian",
+      animal: "The Golden Eagle",
+      currency: "Tenge"
     },
     {
       name: "Kenya",
@@ -864,9 +864,9 @@ const countriesSeed = [
       description: "Capital city is Nairobi",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ke-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Swahili; English",
+      animal: "African Lion",
+      currency: "Kenyan Shilling"
     },
     {
       name: "Kiribati",
@@ -874,9 +874,9 @@ const countriesSeed = [
       description: "Capital city is Tarawa",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ki-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Gilbertese",
+      animal: "Frigatebird is national bird",
+      currency: "Kirabati Dollar"
     },
     {
       name: "Kuwait",
@@ -884,9 +884,9 @@ const countriesSeed = [
       description: "Capital city is Kuwait City",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kw-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic; English",
+      animal: "Arabian Camel",
+      currency: "Kuwaiti Dollar"
     },
     {
       name: "Kyrgyzstan",
@@ -894,9 +894,9 @@ const countriesSeed = [
       description: "Capital city is Bishkek",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kg-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Kyrgyz; Russian",
+      animal: "Markhor",
+      currency: "Som"
     },
     {
       name: "Lao , People's Democratic Republic",
@@ -904,9 +904,9 @@ const countriesSeed = [
       description: "Capital city is Vientiane",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/la-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Lao (Laotian)",
+      animal: "Elephant",
+      currency: "Kip"
     },
     {
       name: "Latvia",
@@ -914,9 +914,9 @@ const countriesSeed = [
       description: "Capital city is Riga",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lv-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Latvian",
+      animal: "Horse",
+      currency: "Lats"
     },
     {
       name: "Lebanon",
@@ -924,9 +924,9 @@ const countriesSeed = [
       description: "Capital city is Beirut",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lb-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic; French",
+      animal: "Striped Hyena",
+      currency: "Lebanese Pound"
     },
     {
       name: "Lesotho",
@@ -934,9 +934,9 @@ const countriesSeed = [
       description: "Capital city is Maseru",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ls-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Sesotho; English",
+      animal: "Black Rhinoceros",
+      currency: "Loti"
     },
     {
       name: "Liberia",
@@ -944,9 +944,9 @@ const countriesSeed = [
       description: "Capital city is Monrovia",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Asiatic Lion",
+      currency: "Liberian Dollar"
     },
     {
       name: "Libya",
@@ -954,9 +954,9 @@ const countriesSeed = [
       description: "Capital city is Tripolis",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ly-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Eagle",
+      currency: "Libyan Dinar"
     },
     {
       name: "Liechtenstein",
@@ -964,9 +964,9 @@ const countriesSeed = [
       description: "Capital city is Vaduz",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/li-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "German",
+      animal: "Kestrel is national bird",
+      currency: "Swiss Fran"
     },
     {
       name: "Lithuania",
@@ -974,9 +974,9 @@ const countriesSeed = [
       description: "Capital city is Vilnius",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lt-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Lithuanian",
+      animal: "White Stork is national bird",
+      currency: "Lithuanian Litas"
     },
     {
       name: "Luxembourg",
@@ -984,9 +984,9 @@ const countriesSeed = [
       description: "Capital city is Luxembourg",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lu-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "German; French; Luxembourgish",
+      animal: "Lion",
+      currency: "Euro"
     },
     {
       name: "Macedonia",
@@ -994,9 +994,9 @@ const countriesSeed = [
       description: "Capital city is Skopje",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mk-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Macedonian",
+      animal: "Lion",
+      currency: "Macedonian Denar"
     },
     {
       name: "Madagascar",
@@ -1004,9 +1004,9 @@ const countriesSeed = [
       description: "Capital city is Maseru",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mg-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Malagasy; French; English",
+      animal: "Ring-tailed Lemur",
+      currency: "Malagasy Ariary"
     },
     {
       name: "Malawi",
@@ -1014,9 +1014,9 @@ const countriesSeed = [
       description: "Capital city is Lilongwe",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mw-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Thomson's Gazelle",
+      currency: "Malawi Kwacha"
     },
     {
       name: "Malaysia",
@@ -1024,9 +1024,9 @@ const countriesSeed = [
       description: "Capital city is Kuala Lumpur",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/my-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Malay",
+      animal: "Malayan Tiger",
+      currency: "Ringgit"
     },
     {
       name: "Maldives",
@@ -1034,9 +1034,9 @@ const countriesSeed = [
       description: "Capital city is Male",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mv-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Dhivehi",
+      animal: "Yellowfin Tuna is national fish",
+      currency: "Maldivian Rufiyaa"
     },
     {
       name: "Mali",
@@ -1044,9 +1044,9 @@ const countriesSeed = [
       description: "Capital city is Bamako",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ml-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "French",
+      animal: "Vulture",
+      currency: "West African CFA Franc"
     },
     {
       name: "Malta",
@@ -1054,9 +1054,9 @@ const countriesSeed = [
       description: "Capital city is Valletta",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mt-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Maltese; English",
+      animal: "Pharaoh Hound",
+      currency: "Euro"
     },
     {
       name: "Marshall Islands",
@@ -1064,9 +1064,9 @@ const countriesSeed = [
       description: "Capital city is Majuro",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mh-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Marshallese; English",
+      animal: "Undeclared",
+      currency: "United States Dollar"
     },
     {
       name: "Mauritania",
@@ -1074,9 +1074,9 @@ const countriesSeed = [
       description: "Capital city is Nouakchott",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Undeclared. Motto is: 'Honor, Fraternity, Justice'",
+      currency: "Ouguiya"
     },
     {
       name: "Mauritius",
@@ -1084,9 +1084,9 @@ const countriesSeed = [
       description: "Capital city is Port Louis",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mu-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Dodo",
+      currency: "Mauritian Rupee"
     },
     {
       name: "Mexico",
@@ -1094,9 +1094,9 @@ const countriesSeed = [
       description: "Capital city is Mexico City",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mx-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Golden Eagle",
+      currency: "Mexican Peso"
     },
     {
       name: "Micronesia, Federated States of",
@@ -1104,9 +1104,9 @@ const countriesSeed = [
       description: "Capital city is Palikir",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/fm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Undeclared",
+      currency: "United States Dollar"
     },
     {
       name: "Moldova",
@@ -1114,9 +1114,9 @@ const countriesSeed = [
       description: "Capital city is Chisinau",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/md-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Moldovan (Romanian)",
+      animal: "Aurochs",
+      currency: "Moldovan Leu"
     },
     {
       name: "Monaco",
@@ -1124,9 +1124,9 @@ const countriesSeed = [
       description: "Capital city is Monaco",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mc-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "French; Italian; English",
+      animal: "Hedgehog",
+      currency: "Euro"
     },
     {
       name: "Mongolia",
@@ -1134,9 +1134,9 @@ const countriesSeed = [
       description: "Capital city is Ulan Bator",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mn-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Mongolian",
+      animal: "Przewalski Horse",
+      currency: "Togrog"
     },
     {
       name: "Montenegro",
@@ -1144,9 +1144,9 @@ const countriesSeed = [
       description: "Capital city is Podgorica",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/me-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Montenegrin",
+      animal: "Unknown",
+      currency: "Euro"
     },
     {
       name: "Morocco",
@@ -1154,9 +1154,9 @@ const countriesSeed = [
       description: "Capital city is Rabat",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ma-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Barbary Lion",
+      currency: "Moroccan Dirham"
     },
     {
       name: "Mozambique",
@@ -1164,9 +1164,9 @@ const countriesSeed = [
       description: "Capital city is Maputo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Portuguese",
+      animal: "African Elephant",
+      currency: "Mozambican Metical"
     },
     {
       name: "Namibia",
@@ -1174,9 +1174,9 @@ const countriesSeed = [
       description: "Capital city is Windhoek",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/na-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Afrikaans; German",
+      animal: "Oryx",
+      currency: "Namibian Dollar"
     },
     {
       name: "Nauru",
@@ -1184,9 +1184,9 @@ const countriesSeed = [
       description: "Capital city is Yaren",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Nauran",
+      animal: "Great Frigatebird",
+      currency: "Australian Dollar"
     },
     {
       name: "Nepal",
@@ -1194,9 +1194,9 @@ const countriesSeed = [
       description: "Capital city is Kathmandu",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/np-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Nepali",
+      animal: "Cow",
+      currency: "Nepalese Rupee"
     },
     {
       name: "Netherlands",
@@ -1204,9 +1204,9 @@ const countriesSeed = [
       description: "Capital city is Amsterdam",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nl-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Dutch",
+      animal: "Lion",
+      currency: "Euro"
     },
     {
       name: "New Zealand",
@@ -1214,9 +1214,9 @@ const countriesSeed = [
       description: "Capital city is Wellington",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Kiwi",
+      currency: "New Zealand Dollar"
     },
     {
       name: "Nicaragua",
@@ -1224,9 +1224,9 @@ const countriesSeed = [
       description: "Capital city is Managua",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ni-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Jaguar",
+      currency: "Cordoba"
     },
     {
       name: "Niger",
@@ -1234,9 +1234,9 @@ const countriesSeed = [
       description: "Capital city is Niamey",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ne-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "French",
+      animal: "Dama Gazelle",
+      currency: "West African CFA Franc"
     },
     {
       name: "Nigeria",
@@ -1244,9 +1244,9 @@ const countriesSeed = [
       description: "Capital city is Amsterdam",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ng-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Eagle",
+      currency: "Naira"
     },
     {
       name: "North Korea",
@@ -1254,9 +1254,9 @@ const countriesSeed = [
       description: "Capital city is Pyongyang",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kp-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Korean",
+      animal: "Undeclared but the national symbol is Chollima (a mythological winged horse)",
+      currency: "North Korean Won"
     },
     {
       name: "Norway",
@@ -1264,9 +1264,9 @@ const countriesSeed = [
       description: "Capital city is Oslo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/no-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Norwegian",
+      animal: "Lion",
+      currency: "Norwegian Krone"
     },
     {
       name: "Oman",
@@ -1274,9 +1274,9 @@ const countriesSeed = [
       description: "Capital city is Muscat",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/om-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Oryx",
+      currency: "Omani Rial"
     },
     {
       name: "Pakistan",
@@ -1284,9 +1284,9 @@ const countriesSeed = [
       description: "Capital city is Islamabad",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pk-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Urdu; English",
+      animal: "Markhor",
+      currency: "Pakistani Rupee"
     },
     {
       name: "Palau",
@@ -1294,9 +1294,9 @@ const countriesSeed = [
       description: "Capital city is Melekeok",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pw-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Palauan",
+      animal: "Palau Fruit Dove",
+      currency: "United States Dollar"
     },
     {
       name: "Panama",
@@ -1304,9 +1304,9 @@ const countriesSeed = [
       description: "Capital city is Panama City",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pa-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Harpy Eagle",
+      currency: "Balboa"
     },
     {
       name: "Papa New Guinea",
@@ -1314,9 +1314,9 @@ const countriesSeed = [
       description: "Capital city is Port Moresby",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pg-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Tok Pisin; Hiri Motu",
+      animal: "Dugong",
+      currency: "Papa New Guinean Kina"
     },
     {
       name: "Paraguay",
@@ -1324,9 +1324,9 @@ const countriesSeed = [
       description: "Capital city is Asuncion",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/py-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish; Guarani",
+      animal: "Pampas Fox",
+      currency: "Guarani"
     },
     {
       name: "Peru",
@@ -1334,9 +1334,9 @@ const countriesSeed = [
       description: "Capital city is Lima",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pe-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Vicuna",
+      currency: "Nuevo Sol"
     },
     {
       name: "Philippines",
@@ -1344,9 +1344,9 @@ const countriesSeed = [
       description: "Capital city is Manila",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ph-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Filipino; English",
+      animal: "Phillippine Eagle",
+      currency: "Phillipine Peso"
     },
     {
       name: "Poland",
@@ -1354,9 +1354,9 @@ const countriesSeed = [
       description: "Capital city is Warsaw",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pl-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Polish",
+      animal: "European Bison",
+      currency: "Zloty"
     },
     {
       name: "Portugal",
@@ -1364,9 +1364,9 @@ const countriesSeed = [
       description: "Capital city is Lisbon",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pt-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Portuguese",
+      animal: "Iberian Wolf",
+      currency: "Euro"
     },
     {
       name: "Qatar",
@@ -1374,9 +1374,9 @@ const countriesSeed = [
       description: "Capital city is Doha",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/qa-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Oryx",
+      currency: "Qatari Riyal"
     },
     {
       name: "Romania",
@@ -1384,9 +1384,9 @@ const countriesSeed = [
       description: "Capital city is Bucharest",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ro-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Romanian",
+      animal: "Lynx",
+      currency: "Romanian Rupee"
     },
     {
       name: "Russian Federation",
@@ -1394,9 +1394,9 @@ const countriesSeed = [
       description: "Capital city is Moscow",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ru-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Russian",
+      animal: "Eurasian Brown Bear",
+      currency: "Ruble"
     },
     {
       name: "Rwanda",
@@ -1404,9 +1404,9 @@ const countriesSeed = [
       description: "Capital city is Kigali",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/rw-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Kinyarwanda; French; English",
+      animal: "Leopard",
+      currency: "Rwandan Franc"
     },
     {
       name: "Saint Kitts and Nevis",
@@ -1414,9 +1414,9 @@ const countriesSeed = [
       description: "Capital city is Basseterre",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kn-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Brown Pelican",
+      currency: "East Caribbean Dollar"
     },
     {
       name: "Saint Lucia",
@@ -1424,9 +1424,9 @@ const countriesSeed = [
       description: "Capital city is Castries",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lc-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Saint Lucia Amazon (parrot)",
+      currency: "East Caribbean Dollar"
     },
     {
       name: "Samoa",
@@ -1434,9 +1434,9 @@ const countriesSeed = [
       description: "Capital city is Apia",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ws-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Samoan; English",
+      animal: "Tooth-billed Pigeon",
+      currency: "Tala"
     },
     {
       name: "San Marino",
@@ -1444,9 +1444,9 @@ const countriesSeed = [
       description: "Capital city is Can Marino",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Italian",
+      animal: "Unknown",
+      currency: "Euro"
     },
     {
       name: "Sao Tome and Principe",
@@ -1454,9 +1454,9 @@ const countriesSeed = [
       description: "Capital city is Sao Tome",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/st-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Portuguese",
+      animal: "Undeclared",
+      currency: "Dobra"
     },
     {
       name: "Saudi Arabia",
@@ -1464,9 +1464,9 @@ const countriesSeed = [
       description: "Capital city is Riyadh",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sa-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Camel",
+      currency: "Riyal"
     },
     {
       name: "Senegal",
@@ -1474,9 +1474,9 @@ const countriesSeed = [
       description: "Capital city is Dakar",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sn-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "French",
+      animal: "Lion",
+      currency: "CFA Franc"
     },
     {
       name: "Serbia",
@@ -1484,9 +1484,9 @@ const countriesSeed = [
       description: "Capital city is Belgrade",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/rs-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Serbian",
+      animal: "Wolf",
+      currency: "Serbian Dinar"
     },
     {
       name: "Seychelles",
@@ -1494,9 +1494,9 @@ const countriesSeed = [
       description: "Capital city is Victoria",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sc-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Seychellois Creole, French, English",
+      animal: "Undeclared",
+      currency: "Seychelles Rupee"
     },
     {
       name: "Sierra Leone",
@@ -1504,9 +1504,9 @@ const countriesSeed = [
       description: "Capital city is Freetown",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sl-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Lion",
+      currency: "Leone"
     },
     {
       name: "Singapore",
@@ -1514,9 +1514,9 @@ const countriesSeed = [
       description: "Capital city is Singapur",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sg-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English, Chinese, Malay Tamil",
+      animal: "Lion",
+      currency: "Singapore Dollar"
     },
     {
       name: "Slovakia",
@@ -1524,9 +1524,9 @@ const countriesSeed = [
       description: "Capital city is Bratislava",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sk-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Slovak",
+      animal: "Czech Lion",
+      currency: "Euro"
     },
     {
       name: "Slovenia",
@@ -1534,9 +1534,9 @@ const countriesSeed = [
       description: "Capital city is Ljubljana",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/si-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Slovene",
+      animal: "Undeclared",
+      currency: "Slovenian Tolar; Euro"
     },
     {
       name: "Solomon Islands",
@@ -1544,9 +1544,9 @@ const countriesSeed = [
       description: "Capital city is Honiara",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sb-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Undeclared",
+      currency: "Solomon Islands Dollar"
     },
     {
       name: "Somalia",
@@ -1554,9 +1554,9 @@ const countriesSeed = [
       description: "Capital city is Mogadishu",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/so-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Somali; Arabic",
+      animal: "Leopard",
+      currency: "Somali Shilling"
     },
     {
       name: "South Africa",
@@ -1564,9 +1564,9 @@ const countriesSeed = [
       description: "Capital city is Pretoria",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/za-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Afrikaans, English, Southern Ndebele, Northern Sotho, Southern Sotho, Swazi Tsonga, Tswana, Venda, Xhosa, Zulu",
+      animal: "Springbok",
+      currency: "Rand"
     },
     {
       name: "South Korea",
@@ -1574,9 +1574,9 @@ const countriesSeed = [
       description: "Capital city is Capital City Seoul",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/kr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Korean",
+      animal: "Siberian Tiger",
+      currency: "South Korean Won"
     },
     {
       name: "South Sudan",
@@ -1584,9 +1584,9 @@ const countriesSeed = [
       description: "Capital city is Juba",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ss-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "African Fish Eagle",
+      currency: "Sudanese Pound"
     },
     {
       name: "Spain",
@@ -1594,9 +1594,9 @@ const countriesSeed = [
       description: "Capital city is Madrid",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/es-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish, Catalan Galician, Gasque",
+      animal: "Bull",
+      currency: "Euro"
     },
     {
       name: "Sri Lanka",
@@ -1604,9 +1604,9 @@ const countriesSeed = [
       description: "Capital city is Colombo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/lk-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Sinhala, Tamil",
+      animal: "Lion",
+      currency: "Sri Lankan Rupee"
     },
     {
       name: "St Vincent and the Grenadines",
@@ -1614,9 +1614,9 @@ const countriesSeed = [
       description: "Capital city is Kingstown",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/vc-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Saint Vincent Amazon",
+      currency: "Caribbean Dollar"
     },
     {
       name: "Sudan",
@@ -1624,9 +1624,9 @@ const countriesSeed = [
       description: "Capital city is Khartoum",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sd-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic; English",
+      animal: "Sudan Cheetah",
+      currency: "Sudanese Pound"
     },
     {
       name: "Suriname",
@@ -1634,9 +1634,9 @@ const countriesSeed = [
       description: "Capital city is Paramaribo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Dutch",
+      animal: "Jaguarundi",
+      currency: "Surinamese Dollar"
     },
     {
       name: "Swaziland",
@@ -1644,9 +1644,9 @@ const countriesSeed = [
       description: "Capital city is Mbabane",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English; Swati",
+      animal: "Thomson's Gazelle",
+      currency: "Lilangeni"
     },
     {
       name: "Sweden",
@@ -1654,9 +1654,9 @@ const countriesSeed = [
       description: "Capital city is Stockholm",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/se-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Swedish",
+      animal: "Eurasian Elk/Moose",
+      currency: "Krona"
     },
     {
       name: "Switzerland",
@@ -1664,9 +1664,9 @@ const countriesSeed = [
       description: "Capital city is Bern",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ch-flag.png",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "German; French; Italian; Romansh",
+      animal: "Cow",
+      currency: "Swiss Franc"
     },
     {
       name: "Syrian Arab Republic",
@@ -1674,9 +1674,9 @@ const countriesSeed = [
       description: "Capital city is Damascus",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/sy-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Syrian Brown Bear",
+      currency: "Syrian Pound"
     },
     {
       name: "Tajikistan",
@@ -1684,9 +1684,9 @@ const countriesSeed = [
       description: "Capital city is Dushanbe",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tj-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Tajik; Russian",
+      animal: "Pamir Argali",
+      currency: "Somoni"
     },
     {
       name: "Tanzania",
@@ -1694,9 +1694,9 @@ const countriesSeed = [
       description: "Capital city is Dodoma",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Swahili; English",
+      animal: "Giraffe",
+      currency: "Tanzanian Shilling"
     },
     {
       name: "Thailand",
@@ -1704,9 +1704,9 @@ const countriesSeed = [
       description: "Capital city is Bangkok",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/th-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Thai",
+      animal: "Elephant",
+      currency: "Baht"
     },
     {
       name: "Timor-Leste",
@@ -1714,9 +1714,9 @@ const countriesSeed = [
       description: "Capital city is Dili",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tl-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Portuguese",
+      animal: "Crocodile",
+      currency: "United States Dollar"
     },
     {
       name: "Togo",
@@ -1724,9 +1724,9 @@ const countriesSeed = [
       description: "Capital city is Lome",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tg-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "French",
+      animal: "Lion",
+      currency: "CFA Franc"
     },
     {
       name: "Tonga",
@@ -1734,9 +1734,9 @@ const countriesSeed = [
       description: "Capital city is Nuku'alofa",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/to-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Flying Fox",
+      currency: "Pa'anga"
     },
     {
       name: "Trinidad and Tobago",
@@ -1744,9 +1744,9 @@ const countriesSeed = [
       description: "Capital city is Port of Spain",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tt-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Scarlet Ibis",
+      currency: "Trinidad and Tobago Dollar"
     },
     {
       name: "Tunisia",
@@ -1754,9 +1754,9 @@ const countriesSeed = [
       description: "Capital city is Tunis",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tn-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Dromedary",
+      currency: "Tunisian Dinar"
     },
     {
       name: "Turkey",
@@ -1764,9 +1764,9 @@ const countriesSeed = [
       description: "Capital city is Ankara",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tr-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Turkish",
+      animal: "Gray Wold",
+      currency: "Turkish Lira"
     },
     {
       name: "Turkmenistan",
@@ -1774,9 +1774,9 @@ const countriesSeed = [
       description: "Capital city is Ashgabat",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Turkmen",
+      animal: "Undeclared",
+      currency: "Manat"
     },
     {
       name: "Tuvalu",
@@ -1784,9 +1784,9 @@ const countriesSeed = [
       description: "Capital city is Funafuti",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tv-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Tuvaluan; English",
+      animal: "Undeclared",
+      currency: "Tuvaluan Dollar"
     },
     {
       name: "Uganda",
@@ -1794,9 +1794,9 @@ const countriesSeed = [
       description: "Capital city is Kampala",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ug-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Swahili; English; Luganda",
+      animal: "Grey Crowned Crane",
+      currency: "Ugandan New Shilling"
     },
     {
       name: "Ukraine",
@@ -1804,9 +1804,9 @@ const countriesSeed = [
       description: "Capital city is Kiev",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ua-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Ukranian",
+      animal: "Common Nightingale",
+      currency: "Hryvnia"
     },
     {
       name: "United Arab Emirates",
@@ -1814,9 +1814,9 @@ const countriesSeed = [
       description: "Capital city is Abu Dhabi",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ae-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Oryx",
+      currency: "U.A.E. Dirham"
     },
     {
       name: "United Kingdom",
@@ -1824,9 +1824,9 @@ const countriesSeed = [
       description: "Capital city is London",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gb-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Lion",
+      currency: "Pound Sterling"
     },
     {
       name: "United States",
@@ -1834,9 +1834,9 @@ const countriesSeed = [
       description: "Capital city is Washington",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/us-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "Bison",
+      currency: "Dollar"
     },
     {
       name: "Uruguay",
@@ -1844,9 +1844,9 @@ const countriesSeed = [
       description: "Capital city is Montevideo",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/uy-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Southern Lapwing",
+      currency: "Uruguay Peso"
     },
     {
       name: "Uzbekistan",
@@ -1854,9 +1854,9 @@ const countriesSeed = [
       description: "Capital city is Tashkent",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/uz-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Uzbek",
+      animal: "Turkestan Sand Cat",
+      currency: "Uzbekistani Sum"
     },
     {
       name: "Vanuatu",
@@ -1864,9 +1864,9 @@ const countriesSeed = [
       description: "Capital city is Port Vila",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/vu-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Bislama; French; English",
+      animal: "Iguana",
+      currency: "Vatu"
     },
     {
       name: "Venezuela",
@@ -1874,9 +1874,9 @@ const countriesSeed = [
       description: "Capital city is Caracas",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ve-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Spanish",
+      animal: "Venezuelan Troupial",
+      currency: "Bolivar"
     },
     {
       name: "Vietnam",
@@ -1884,9 +1884,9 @@ const countriesSeed = [
       description: "Capital city is Hanoi",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/vn-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Vietnamese",
+      animal: "Water Buffalo",
+      currency: "Dong"
     },
     {
       name: "Yemen",
@@ -1894,9 +1894,9 @@ const countriesSeed = [
       description: "Capital city is Sana'a",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ye-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Arabian Leopard",
+      currency: "Rial"
     },
     {
       name: "Zambia",
@@ -1904,9 +1904,9 @@ const countriesSeed = [
       description: "Capital city is Lusaka",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/zm-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "English",
+      animal: "African Fish Eagle",
+      currency: "Kwacha"
     },
     {
       name: "Zimbabwe",
@@ -1914,8 +1914,8 @@ const countriesSeed = [
       description: "Capital city is Harare",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/zw-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
+      languages: "English; Shona; Ndebele",
+      animal: "Sable Antelope",
       currency: ""
     },
     {
@@ -1924,9 +1924,9 @@ const countriesSeed = [
       description: "Capital city is East Jerusalem",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ps-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Arabic",
+      animal: "Gazelle",
+      currency: "Palestine Pound"
     },
     {
       name: "Vatican",
@@ -1934,9 +1934,9 @@ const countriesSeed = [
       description: "Capital city is Vatican City",
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/va-flag.jpg",
       date: new Date(Date.now()),
-      languages: "",
-      animal: "",
-      currency: ""
+      languages: "Italian",
+      animal: "Undeclared",
+      currency: "Euro"
     },
     {
       name: "American Samoa",
@@ -1945,7 +1945,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/as-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Fruit Bat",
       currency: ""
     },
     {
@@ -1955,7 +1955,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ai-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Zenaida Dove",
       currency: ""
     },
     {
@@ -1965,7 +1965,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/va-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Burrowing Owl",
       currency: ""
     },
     {
@@ -1975,7 +1975,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/bm-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Humpback Whale",
       currency: ""
     },
     {
@@ -1985,7 +1985,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/vg-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Bananaquit (bird)",
       currency: ""
     },
     {
@@ -1995,7 +1995,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ky-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Grand Cayman Parrot",
       currency: ""
     },
     {
@@ -2005,7 +2005,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ck-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
@@ -2015,7 +2015,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/fk-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Penguin",
       currency: ""
     },
     {
@@ -2025,7 +2025,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gf-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "African Elephant",
       currency: ""
     },
     {
@@ -2035,7 +2035,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pf-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Sea Turtle",
       currency: ""
     },
     {
@@ -2055,7 +2055,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gl-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "White Polar Bear",
       currency: ""
     },
     {
@@ -2065,7 +2065,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gp-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Guadeloupe Raccoon",
       currency: ""
     },
     {
@@ -2075,7 +2075,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/gu-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Guam Rail",
       currency: ""
     },
     {
@@ -2085,7 +2085,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/hk-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Giant Panda",
       currency: ""
     },
     {
@@ -2095,7 +2095,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/mo-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Panda Bear",
       currency: ""
     },
     {
@@ -2105,7 +2105,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/ms-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
@@ -2115,7 +2115,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nc-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Cagou",
       currency: ""
     },
     {
@@ -2125,7 +2125,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nu-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Niue Blue (butterfly)",
       currency: ""
     },
     {
@@ -2135,7 +2135,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/nf-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
@@ -2165,7 +2165,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/pr-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Common Coqui",
       currency: ""
     },
     {
@@ -2175,7 +2175,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/re-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
@@ -2185,7 +2185,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tw-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Formosan Rock Macaque",
       currency: ""
     },
     {
@@ -2195,7 +2195,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tk-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
@@ -2205,7 +2205,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/tc-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Gray Wolf",
       currency: ""
     },
     {
@@ -2225,7 +2225,7 @@ const countriesSeed = [
       profilePicture: "https://www.worldatlas.com/r/w480/img/flag/wf-flag.jpg",
       date: new Date(Date.now()),
       languages: "",
-      animal: "",
+      animal: "Undeclared",
       currency: ""
     },
     {
