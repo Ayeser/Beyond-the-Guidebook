@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import "../pages/AllCountries.css"
+// import "../pages/AllCountries.css"
 
 function CountryPage() {
   const [countries, setCountries] = useState({});
@@ -29,7 +29,6 @@ function CountryPage() {
         }
       )
       .catch(err => console.log(err));
-      switchCountry(name);
   };
 
   function switchCountry(name) {
@@ -43,6 +42,7 @@ function CountryPage() {
       .then(res => setQuestionsObject(res.data))
       .catch(err => console.log(err));
   }
+  switchCountry(name);
 
   function handleInputChange(event) {
     const { name, value } = event.target;
