@@ -52,9 +52,9 @@ function AllCountries() {
   function handleFormSubmitAdvice(event) {
     event.preventDefault();
       return API.saveComment({
-        place: singleCountry.name,
-        person: formObject.author,
-        advice: formObject.comment
+        place: name,
+        person: username,
+        advice: formObject.advice
       })
         .then(console.log("Comment uploaded"))
         .catch(err => console.log(err));
@@ -63,8 +63,8 @@ function AllCountries() {
   function handleFormSubmitQuestion(event) {
     event.preventDefault();
     return API.saveQuestion({
-      place: singleCountry.name,
-      person: formObject.questioner,
+      place: name,
+      person: username,
       question: formObject.question
     })
       .then(console.log("Question uploaded"))
@@ -167,12 +167,12 @@ function AllCountries() {
               />
               <TextArea
                 onChange={handleInputChange}
-                name="comment"
+                name="advice"
                 placeholder="Type comment here"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.comment)}
-                onClick={handleFormSubmitAdvice}
+                disabled={!formObject.advice}
+                onClick={function(event) {handleFormSubmitAdvice(event)}}
               >
                 Submit Comment
               </FormBtn>
@@ -207,8 +207,8 @@ function AllCountries() {
                 placeholder="Question here"
               />
               <FormBtn
-                disabled={!(formObject.questioner && formObject.question)}
-                onClick={handleFormSubmitQuestion}
+                disabled={!formObject.question}
+                onClick={function(event) {handleFormSubmitQuestion(event)}}
               >
                 Submit Question
               </FormBtn>
