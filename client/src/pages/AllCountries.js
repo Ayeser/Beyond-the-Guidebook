@@ -19,9 +19,9 @@ function AllCountries() {
   
   setCountry({name: name});
 
-  useEffect(() => {
+  // useEffect(() => {
     loadCountries();
-  }, []);
+  // }, []);
 
   function loadCountries() {
     API.getCountries()
@@ -31,9 +31,9 @@ function AllCountries() {
         }
       )
       .catch(err => console.log(err));
-      switchCountry(name);
   };
-
+  switchCountry(name);
+  
   function switchCountry(name) {
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
