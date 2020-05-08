@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const db = require("../../models");
+const Countries = require('../../models/countries'); 
 
 // Matches with "/api/countries"
 router.get("/", (req, res) => {
