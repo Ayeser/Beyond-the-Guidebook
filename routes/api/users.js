@@ -76,14 +76,14 @@ router.get("/members/:username", (req, res) => {
 
   router.post("/saveComment", (req, res) => {
       db.Comments
-      .create (req.body)
+      .save(req.body)
       .then(dbCreate => res.json(dbCreate))
       .catch(err => res.status(500).json(err));
 });
 
 router.post("/saveQuestion", (req, res) => {
     db.Questions
-    .create (req.body)
+    .save(req.body)
     .then(dbCreate => res.json(dbCreate))
     .catch(err => res.status(500).json(err));
 });

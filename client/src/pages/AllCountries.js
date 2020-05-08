@@ -52,8 +52,8 @@ function AllCountries() {
   function handleFormSubmitAdvice(event) {
     event.preventDefault();
       return API.saveComment({
-        place: singleCountry.name,
         person: singleCountry.username,
+        place: singleCountry.name,
         advice: formObject.comment
       })
         .then(console.log("Comment uploaded"))
