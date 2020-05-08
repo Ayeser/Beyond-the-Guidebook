@@ -23,7 +23,7 @@ function App() {
         <AllCountries />
         </Route>
         <Route exact path={["/members", "/countries", "/countries/:name", "/members/:username"]}>
-        <Welcome />
+        <Landing />
         </Route>
         <Route exact path={"/members/:username/:id"}>
         <UserProfile />
