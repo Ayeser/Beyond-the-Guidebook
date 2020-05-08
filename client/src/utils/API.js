@@ -38,6 +38,6 @@ saveComment: function(req) {
   return axios.post("/api/users/saveComment", {"person": req.person, "place": req.place, "advice": req.advice});
 },
 saveQuestion: function(req) {
-  return axios.post("/api/users/saveQuestion", {"person": req.person, "place": req.place, "question": req.advice});
+  return axios.post("/api/users/saveQuestion", {"person": req.person, "place": req.place, "question": req.question});
 }
 };

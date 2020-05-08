@@ -63,8 +63,8 @@ function AllCountries() {
   function handleFormSubmitQuestion(event) {
     event.preventDefault();
     return API.saveQuestion({
-      place: name,
       person: username,
+      place: name,
       question: formObject.question
     })
       .then(console.log("Question uploaded"))
@@ -199,7 +199,6 @@ function AllCountries() {
               <Input
                   disabled={true}
                   value={username}
-                name="questioner"
 
               />
               <TextArea
