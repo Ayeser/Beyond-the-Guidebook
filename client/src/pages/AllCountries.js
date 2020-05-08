@@ -53,7 +53,7 @@ function AllCountries() {
     event.preventDefault();
       return API.saveComment({
         place: singleCountry.name,
-        person: formObject.author,
+        person: singleCountry.username,
         advice: formObject.comment
       })
         .then(console.log("Comment uploaded"))
@@ -64,7 +64,7 @@ function AllCountries() {
     event.preventDefault();
     return API.saveQuestion({
       place: singleCountry.name,
-      person: formObject.questioner,
+      person: singleCountry.username,
       question: formObject.question
     })
       .then(console.log("Question uploaded"))
