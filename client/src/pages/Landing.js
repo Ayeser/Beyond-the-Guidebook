@@ -21,7 +21,7 @@ function Landing() {
         email: formObject.createEmail,
         password: formObject.createPassword
       })
-        .then(setFormObject({message : "Congratulations, account created! You may now log in."}))
+        .then(setFormObject({message : "Account created! Please log in."}))
         .catch(err => console.log(err));
     };
 

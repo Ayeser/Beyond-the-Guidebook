@@ -9,7 +9,7 @@ import Nav from "../components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import "../pages/AllCountries.css"
 
-function CountryPage() {
+function AllCountries() {
   const [countries, setCountries] = useState({});
   const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
@@ -235,4 +235,4 @@ function CountryPage() {
   }
 
 
-export default CountryPage;
+export default AllCountries;
