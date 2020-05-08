@@ -52,6 +52,7 @@ router.get("/members/:username", (req, res) => {
         .catch(err => res.status(422).json(err));
   })
 
+
   router.get("/authorizedMember/:username", (req, res) => {
     db.Users
         .find( { "username" : req.params.username } )
