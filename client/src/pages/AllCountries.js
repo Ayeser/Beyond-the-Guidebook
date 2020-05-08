@@ -116,6 +116,8 @@ function AllCountries() {
             )}
           </Col>
 <Col size="md-10 sm-8">
+  </Col>
+  </Row>
 <Row>
           <Col size="md-5 sm-8">
             <div className= "CultureboxA">
@@ -177,7 +179,7 @@ function AllCountries() {
               </FormBtn>
             </form>
 
-            {commentsObject && commentsObject.length  > 0 ? (
+            {/* {commentsObject && commentsObject.length  > 0 ? (
               <List>
                 {commentsObject.map(comment => (
                   <ListItem key={comment.advice}>
@@ -225,8 +227,8 @@ function AllCountries() {
             ):(
               <h3>No Results to Display</h3>
             )}
-            </Col>
-            </Row>
+            </Col> */}
+            {/* </Row> */}
 </Col>
           </Row> 
       </Container>
