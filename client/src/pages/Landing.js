@@ -5,8 +5,6 @@ import API from "../utils/API";
 function Landing() {
 
     const [LoginOrSignup, setLoginOrSignup] = useState(false);
-
-
     const [formObject, setFormObject] = useState({});
 
   function handleInputChange(event) {
@@ -21,8 +19,8 @@ function Landing() {
         email: formObject.createEmail,
         password: formObject.createPassword
       })
-        .then(setFormObject({message : "Congratulations, account created! You may now log in."}))
-        .catch(err => console.log(err));
+        .then(setFormObject({ message : "Account created! Log in!" }))
+        .catch(err => console.log(err))
     };
 
   function handleFormLoginSubmit(event) {
@@ -51,7 +49,7 @@ function Landing() {
         <form style={{left:LoginOrSignup ? "-400px" : "50px"}} className="inputs">
           <input type="text" onChange={handleInputChange}  name="loginName" className="input-field" placeholder="UserName" required />
           <input type="text" className="input-field" name="loginPassword" onChange={handleInputChange} placeholder="Password" required />
-          <input type="checkbox" className="check-box" /><span>Remember Me</span>
+          {/* <input type="checkbox" className="check-box" /><span>Remember Me</span> */}
           <button type="submit" className="submit-button" disabled={!(formObject.loginName && formObject.loginPassword)}
                 onClick={function(event) {handleFormLoginSubmit(event)}}
              >Login</button>
@@ -61,7 +59,7 @@ function Landing() {
           <input type="text" className="input-field" onChange={handleInputChange} name="createUsername" placeholder="UserName" required />
           <input type="email" className="input-field" placeholder="Email" onChange={handleInputChange} name="createEmail" required />
           <input type="text" className="input-field" placeholder="Password" onChange={handleInputChange} name="createPassword" required />
-          <input type="checkbox" className="check-box" /><span>I agree to the Terms and Conditions </span>
+          {/* <input type="checkbox" className="check-box" /><span>I agree to the Terms and Conditions </span> */}
           <button type="submit" className="submit-button" disabled={!(formObject.createUsername && formObject.createEmail && formObject.createPassword)}
                 onClick={function(event) {handleFormCreateSubmit(event)}}>Sign Up</button>
                  {formObject.message}

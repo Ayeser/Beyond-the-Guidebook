@@ -16,6 +16,7 @@ function AllCountries() {
   const [commentsObject, setCommentsObject] = useState({});
   const [questionsObject, setQuestionsObject] = useState({});
   const {name, username, id} = useParams();
+  const [alertObject, setAlertObject] = useState({Advice: "", Question: ""});
 
   useEffect(() => {
     loadCountries();
@@ -56,7 +57,7 @@ function AllCountries() {
         place: name,
         advice: formObject.advice
       })
-        .then(console.log("Comment uploaded"))
+        .then(setAlertObject({ Advice: "Comment uploaded"}))
         .catch(err => console.log(err));
     };
 
@@ -67,7 +68,7 @@ function AllCountries() {
       place: name,
       question: formObject.question
     })
-      .then(console.log("Question uploaded"))
+    .then(setAlertObject({ Question: "Question uploaded"}))
       .catch(err => console.log(err));
   };
 
@@ -174,8 +175,9 @@ function AllCountries() {
               <FormBtn
                 disabled={!formObject.advice}
                 onClick={function(event) {handleFormSubmitAdvice(event)}}
+                placeholder="Submit Comment"
               >
-                Submit Comment
+                {alertObject.advice}
               </FormBtn>
             </form>
 
@@ -209,16 +211,17 @@ function AllCountries() {
               <FormBtn
                 disabled={!formObject.question}
                 onClick={function(event) {handleFormSubmitQuestion(event)}}
+                placeholder="Submit Question"
               >
-                Submit Question
+                {alertObject.question}
               </FormBtn>
             </form>
             {questionsObject && questionsObject.length  > 0 ? (
               <List>
-                {questionsObject.map(questions => (
-                  <ListItem key={questions.question}>
+                {questionsObject.map(question => (
+                  <ListItem key={question.question}>
                       <strong>
-                        {questions.question + "     -" + questions.person}
+                        {question.question + "     -" + question.person}
                       </strong>
                   </ListItem>
                 ))}
