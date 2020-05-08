@@ -1,7 +1,6 @@
 import React from "react";
 import NoMatch from "./pages/NoMatch";
 import AllCountries from "./pages/AllCountries";
-import Welcome from "./pages/Welcome";
 import UserProfile from "./pages/UserProfile";
 import Landing from "./pages/Landing";
 // import { BrowserRouter } from "react-router-dom";
