@@ -72,7 +72,7 @@ function Landing() {
             
       <div className="Paragraph" >
           <p>
-          Have you ever wondered what you can learn about the varius cultures of the people in countries you wish to visit? Do you wish you could get first hand accounts from people who are in or have experienced these cultures first hand? Well if so then you have come to the right place, We pesent to you: Beyond the Guidebook! Our application here is meant to increase and expand your knowledge of the cultures of the world while also allowing you to share about your own culture. Our hope is to be able to spread knowledge that you wouldnt necessarily be able to find on the internet or in a guide book. We would be honored if you would journey with us and go Beyond The Guidebooks and see our beauitul world in a different light!
+          Have you ever wondered what you can learn about the cultures of countries you wish to visit? Do you wish you could get first-hand accounts from locals or travelers who have experienced these cultures first-hand? If so then you have come to the right place. We present to you: Beyond the Guidebook! Our application here is meant to increase and expand your knowledge of the cultures of the world while also allowing you to share about your own culture. Our hope is to be able to spread knowledge that you wouldn't necessarily be able to find on the internet or in a guide book. We would be honored if you would journey with us and go Beyond The Guidebook and see our beautiful world in a different light!
           </p>
       </div>
       </div>

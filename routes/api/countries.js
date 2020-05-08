@@ -1,10 +1,11 @@
 const router = require("express").Router();
 const db = require("../../models");
-const Countries = require('../../models/countries'); 
+const Countries = require('../../models/countries');
+const mongoose = require("mongoose"); 
 
 // Matches with "/api/countries"
 router.get("/", (req, res) => {
-  db.Countries
+  Countries
   .find({})
   .sort({ date: -1 })
   .then(dbModel => res.json(dbModel))
