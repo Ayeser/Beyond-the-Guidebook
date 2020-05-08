@@ -15,7 +15,6 @@ const countriesSeed = [
       languages: "Pashto, Dari",
       animal: " National Animal is a Snow Leopard.",
       currency: "Afghani"
-       
     },
     {
       name: "Albania",
