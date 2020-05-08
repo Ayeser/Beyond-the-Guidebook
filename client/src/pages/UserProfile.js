@@ -9,7 +9,7 @@ import API from "../utils/API";
 
     function UserProfile(props) {
         const [userObject, setUserObject] = useState({newbio: ""})
-        const {username} = useParams();
+        const {username, id} = useParams();
         const [formObject, setFormObject] = useState({});
 
         useEffect(() => {
@@ -49,7 +49,6 @@ import API from "../utils/API";
           } else {
             let fillArr = userObject.placesFuture.split(", ")
             for (var j =0;j<fillArr.length;j++) {
-              console.log(fillArr[j]);
               if (document.getElementById(fillArr[j]) === null) {
               } else {
                 let futureDiv = document.getElementById(fillArr[j])
@@ -88,7 +87,7 @@ fillInCountries();
     <h1>Profile Page (including map and user profile)</h1>
     </Row><Row>
 <div>
-    <MapChart username={username}>
+    <MapChart username={username} id={id}>
         <h3>The map below may be filled in with countries marked different colors</h3>
     </MapChart>
 
