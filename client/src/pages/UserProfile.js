@@ -8,7 +8,7 @@ import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 
     function UserProfile(props) {
-        const [userObject, setUserObject] = useState({newbio: ""})
+        const [userObject, setUserObject] = useState({})
         const {username, id} = useParams();
         const [formObject, setFormObject] = useState({});
 

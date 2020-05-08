@@ -19,9 +19,9 @@ function AllCountries() {
   
   setCountry({name: name});
 
-  // useEffect(() => {
+  useEffect(() => {
     loadCountries();
-  // }, []);
+  }, []);
 
   function loadCountries() {
     API.getCountries()
@@ -33,7 +33,7 @@ function AllCountries() {
       .catch(err => console.log(err));
   };
   switchCountry(name);
-  
+
   function switchCountry(name) {
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
@@ -44,6 +44,7 @@ function AllCountries() {
       API.loadQuestions(name)
       .then(res => setQuestionsObject(res.data))
       .catch(err => console.log(err));
+      event.preventDefault();
   };
 
   function handleInputChange(event) {
@@ -80,7 +81,6 @@ function AllCountries() {
 <CountryJumbotron>
               <div className = "Flag">
               <h1>{singleCountry.name}</h1>
-              <h1>{name}</h1>
               <img src={singleCountry.profilePicture} alt="Country Flag" />
               </div>
             </CountryJumbotron>
