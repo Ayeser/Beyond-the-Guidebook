@@ -13,14 +13,13 @@ function AllCountries() {
   const [countries, setCountries] = useState({});
   const [singleCountry, setCountry] = useState({});
   const [formObject, setFormObject] = useState({});
-  // const [commentsObject, setCommentsObject] = useState({});
-  // const [questionsObject, setQuestionsObject] = useState({});
+  const [commentsObject, setCommentsObject] = useState({});
+  const [questionsObject, setQuestionsObject] = useState({});
   const {name, username, id} = useParams();
 
   useEffect(() => {
     loadCountries();
-    switchCountry(name);
-  });
+  }, []);
 
   function loadCountries() {
     API.getCountries()
@@ -30,18 +29,19 @@ function AllCountries() {
         }
       )
       .catch(err => console.log(err));
+      switchCountry(name);
   };
 
   function switchCountry(name) {
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
       .catch(err => console.log(err));
-      // API.loadComments(name)
-      // .then(res => setCommentsObject(res.data))
-      // .catch(err => console.log(err));
-      // API.loadQuestions(name)
-      // .then(res => setQuestionsObject(res.data))
-      // .catch(err => console.log(err));
+      API.loadComments(name)
+      .then(res => setCommentsObject(res.data))
+      .catch(err => console.log(err));
+      API.loadQuestions(name)
+      .then(res => setQuestionsObject(res.data))
+      .catch(err => console.log(err));
   };
 
   function handleInputChange(event) {
@@ -116,9 +116,8 @@ function AllCountries() {
             )}
           </Col>
 <Col size="md-10 sm-8">
-  </Col>
-  </Row>
-<Row>
+      {/* Below row to be right of the countries sidebar, so within a col */}
+        <Row>
           <Col size="md-5 sm-8">
             <div className= "CultureboxA">
             <Jumbotron>
@@ -156,6 +155,7 @@ function AllCountries() {
             </div>
             </Col>
             </Row>
+            </Col>
             <Row>
               <Col size="md=5 sm-8">
             <form>
@@ -179,7 +179,7 @@ function AllCountries() {
               </FormBtn>
             </form>
 
-            {/* {commentsObject && commentsObject.length  > 0 ? (
+            {commentsObject && commentsObject.length  > 0 ? (
               <List>
                 {commentsObject.map(comment => (
                   <ListItem key={comment.advice}>
@@ -227,10 +227,9 @@ function AllCountries() {
             ):(
               <h3>No Results to Display</h3>
             )}
-            </Col> */}
-            {/* </Row> */}
-</Col>
-          </Row> 
+            </Col>
+            </Row> 
+            </Row>
       </Container>
     );
   }

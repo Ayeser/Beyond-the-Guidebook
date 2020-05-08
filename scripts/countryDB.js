@@ -2241,7 +2241,7 @@ const countriesSeed = [
   
   db.Countries
     .remove({})
-    .then(() => db.Countries.collection.insertMany(countriesSeed))
+    .then(() => db.Countries.insertMany(countriesSeed))
     .then(data => {
       console.log(data.result.n + " records inserted!");
       process.exit(0);

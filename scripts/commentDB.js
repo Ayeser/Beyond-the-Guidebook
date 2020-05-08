@@ -16,7 +16,7 @@ const commentsSeed = [
   
   db.Comments
     .remove({})
-    .then(() => db.Comments.collection.insertMany(commentsSeed))
+    .then(() => db.Comments.insertMany(commentsSeed))
     .then(data => {
       console.log(data.result.n + " records inserted!");
       process.exit(0);
