@@ -19,6 +19,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// app.use(express.static("public"));
+
 // Passport
 app.use(passport.initialize())
 app.use(passport.session()) 
@@ -32,6 +34,10 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true,
 
 
 // Add routes, both API and views
+app.get("/Welcome", (req, res) => {
+  console.log("This shoulda worka")
+  res.sendFile(path.join(__dirname, "client/public/login.html"));
+});
 app.use("/", routes);
 
 // Connect to the Mongo DB

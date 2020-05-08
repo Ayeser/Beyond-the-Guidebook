@@ -16,6 +16,10 @@ import API from "../utils/API";
           loadAuthorizedUser(username);
         }, [])
 
+        useEffect(() => {
+          fillInCountries();
+        })
+
         function loadAuthorizedUser(username) {
           API.getUserAlreadyAuthorized(username)
           .then(res => setUserObject(res.data[0]))
@@ -27,7 +31,6 @@ import API from "../utils/API";
           } else {
             let fillArr = userObject.placesVisited.split(", ")
             for (var i =0;i<fillArr.length;i++) {
-              console.log(fillArr[i]);
               if (document.getElementById(fillArr[i]) === null) {
               } else {
                 let newDiv = document.getElementById(fillArr[i])
@@ -79,7 +82,7 @@ import API from "../utils/API";
             .catch(err => console.log(err));
             event.preventDefault();
         };
-fillInCountries();
+        
     return (
       <Container fluid>
         <Nav />

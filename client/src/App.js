@@ -3,6 +3,7 @@ import NoMatch from "./pages/NoMatch";
 import AllCountries from "./pages/AllCountries";
 import Welcome from "./pages/Welcome";
 import UserProfile from "./pages/UserProfile";
+import Landing from "./pages/Landing";
 // import { BrowserRouter } from "react-router-dom";
 
 import {
@@ -17,7 +18,7 @@ function App() {
     <div>
       <Switch>
       <Route exact path={"/"}>
-        <Welcome />
+        <Landing />
         </Route>
         <Route exact path={"/countries/:name/:username/:id"}>
         <AllCountries />

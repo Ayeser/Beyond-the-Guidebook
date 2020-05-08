@@ -102,7 +102,8 @@ function CountryPage() {
               <List>
                 {countries.map(country => (
                   <ListItem key={country.name}>
-                    <Link to={"/countries/" + country.name} onClick={() => switchCountry(country.name)}>
+                    <Link to={"/countries/" + country.name + "/" + username + "/" + id}
+                    onClick={() => switchCountry(country.name)}>
                       <strong>
                         {country.name}
                       </strong>
