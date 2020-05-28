@@ -86,7 +86,7 @@ import API from "../utils/API";
     return (
       <Container fluid>
         <Nav />
-<Row>
+        <Row>
     <h1>Profile Page (including map and user profile)</h1>
     </Row><Row>
 <div>
@@ -97,33 +97,39 @@ import API from "../utils/API";
 </div>
   </Row>
              <Row>
-             <div><p>Your username is: </p> <Input
+             <div><p style={{marginLeft:"2.9rem"}}>Your username is: </p> <Input
+              style={{marginLeft:"2.9rem"}}
                 disabled={true}
                 value={username}
               /></div>
-                       <div><p>Your email is: </p> <Input
+                       <div><p style={{marginLeft:"2.9rem"}}>Your email is: </p> <Input
+                style={{marginLeft:"2.9rem"}}
                 disabled={true}
                 value={userObject.email}
               /></div>
               </Row> <Row>
-              <div><p>Bio: </p> <Input
+              <div><p style={{marginLeft:"2.9rem"}}>Bio: </p> <Input
+              style={{marginLeft:"2.9rem"}}
                 onChange={handleInputChange}
                 name="bio"
                 placeholder={userObject.bio}
               /></div>
-                            <div><p>Your home country is: </p> <Input
+                            <div><p style={{marginLeft:"2.9rem"}}>Your home country is: </p> <Input
+                style={{marginLeft:"2.9rem"}}
                 onChange={handleInputChange}
                 name="homeCountry"
                 placeholder={userObject.homeCountry}
               /></div>
                </Row>  <Row>
-  <div><p>Countries you've been to: </p> <Input
+  <div><p style={{marginLeft:"2.9rem"}}>Countries you've been to: </p> <Input
+  style={{marginLeft:"2.9rem"}}
                 onChange={handleInputChange}
                 name="placesVisited"
                 placeholder={userObject.placesVisited}
               /></div>
                  </Row> <Row>
-               <div><p>Countries you'd like to visit: </p> <Input
+               <div><p style={{marginLeft:"2.9rem"}}>Countries you'd like to visit: </p> <Input
+                style={{marginLeft:"2.9rem"}}
                 onChange={handleInputChange}
                 name="placesFuture"
                 placeholder={userObject.placesFuture}

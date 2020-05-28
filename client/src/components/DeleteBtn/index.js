@@ -5,7 +5,7 @@ import "./style.css";
 // That way we don't have to define them all individually
 function DeleteBtn(props) {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-danger">
+    <button {...props} style={{ float: "right", marginBottom: 10, marginLeft: 40 }} className="btn btn-danger">
       {props.children}
     </button>
   );

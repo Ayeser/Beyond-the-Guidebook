@@ -17,10 +17,10 @@ function MapChart(props) {
       
       return (
         <>
-        <p>{formObject.name}</ p>
-        <p style={{color:"blue"}}>Your home country</ p>
-        <p style={{color:"#FF5722"}}>Countries you've visited (if spelled how we spell it)</ p>
-        <p style={{color:"green"}}>Countries you'd like to visit</ p>
+        <p style={{color:"blue", marginLeft:"2.9rem"}}>Your home country</ p>
+        <p style={{color:"#FF5722", marginLeft:"2.9rem"}}>Countries you've visited (if spelled how we spell it)</ p>
+        <p style={{color:"green", marginLeft:"2.9rem"}}>Countries you'd like to visit</ p>
+        <p style={{marginLeft:"2.9rem"}}>{formObject.name}</ p>
         <ComposableMap
           projection="geoNaturalEarth1"
           projectionConfig={{
@@ -50,19 +50,6 @@ function MapChart(props) {
                        strokeWidth: 0.75,
                        outline: "none",
                     },
-                    // hover: 
-                    // {
-                    //    fill: "#CFD8DC",
-                    //    stroke: "#607D8B",
-                    //    strokeWidth: 1,
-                    //    outline: "none"
-                    //   },
-                    // pressed: {
-                    //    fill: "#FF5722",
-                    //    stroke: "#607D8B",
-                    //    strokeWidth: 1,
-                    //    outline: "none"
-                    // }
                  }}
                 />
               ))
