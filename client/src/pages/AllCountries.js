@@ -82,6 +82,7 @@ function AllCountries() {
             </CountryJumbotron>
   </Row>
   <Row>
+  <Col size="md-1 sm-2" />
           <Col size="md-2 sm-4">
 <form>
   <Input
@@ -114,7 +115,7 @@ function AllCountries() {
               <h3>No Results to Display</h3>
             )}
           </Col>
-<Col size="md-10 sm-8">
+<Col size="md-8 sm-6">
       {/* Below row to be right of the countries sidebar, so within a col */}
         <Row>
           <Col size="md-5 sm-8">
@@ -156,9 +157,10 @@ function AllCountries() {
             </Row>
             </Col>
             <Row>
-              <Col size="md=5 sm-8">
+              <Col size="md-1 sm-2" />
+              <Col size="md-4 sm-5">
             <form>
-            <h2>What "beyond the guidebook" advice can you offer a prospective traveller to this country?</h2>
+            <h2>What "beyond the guidebook" advice can you offer a prospective traveler to this country?</h2>
               <Input
                 disabled={true}
                 value={username}
@@ -176,7 +178,7 @@ function AllCountries() {
               >
                 Submit Comment
               </FormBtn>
-                     <p>{alertObject.advice}</p>
+              <p>{alertObject.advice}</p>
             </form>
 
             {commentsObject && commentsObject.length  > 0 ? (
@@ -192,8 +194,9 @@ function AllCountries() {
             ):(
               <h3>No Results to Display</h3>
             )}
+            
             </Col>
-            <Col size="md=5 sm-8">
+            <Col size="md=4 sm-5">
             <form>
             <h2>Have any questions about the culture of this country?</h2>
               <Input

@@ -85,9 +85,9 @@ import API from "../utils/API";
         
     return (
       <Container fluid>
-        <Nav />
+        <Nav username={username} id={id} />
         <Row>
-    <h1>Profile Page (including map and user profile)</h1>
+    <h1 style={{marginLeft:"4.9rem", marginTop: "30px", marginBottom: "30px"}}>Profile Page (including map and user profile)</h1>
     </Row><Row>
 <div>
     <MapChart username={username} id={id}>
