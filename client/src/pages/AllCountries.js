@@ -64,7 +64,7 @@ function AllCountries() {
     return API.saveQuestion({
       person: username,
       place: name,
-      question: formObject.questionn
+      questionn: formObject.questionn
     })
     .then(setAlertObject({ Question: "Question uploaded"}))
       .catch(err => console.log(err));
