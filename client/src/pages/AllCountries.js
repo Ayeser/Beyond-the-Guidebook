@@ -37,11 +37,11 @@ function AllCountries() {
     API.switchCountry(name)
       .then(res => setCountry(res.data[0]))
       .catch(err => console.log(err));
-      API.loadComments(name)
-      .then(res => setCommentsObject(res.data))
-      .catch(err => console.log(err));
       API.loadQuestions(name)
       .then(res => setQuestionsObject(res.data))
+      .catch(err => console.log(err));
+      API.loadComments(name)
+      .then(res => setCommentsObject(res.data))
       .catch(err => console.log(err));
   };
 
@@ -64,7 +64,7 @@ function AllCountries() {
     return API.saveQuestion({
       person: username,
       place: name,
-      question: formObject.question
+      question: formObject.questionn
     })
     .then(setAlertObject({ Question: "Question uploaded"}))
       .catch(err => console.log(err));
