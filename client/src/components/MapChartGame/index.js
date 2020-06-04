@@ -18,7 +18,7 @@ function MapChartGame(props) {
       return (
         <>
         <ComposableMap
-          projection="AlbersUSA"
+          projection="geoNaturalEarth1"
           projectionConfig={{
             translate: [50, 99, 99],
             rotate: [-10, 70, 70],

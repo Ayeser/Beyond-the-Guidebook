@@ -35,7 +35,6 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true,
 
 // Add routes, both API and views
 app.get("/Welcome", (req, res) => {
-  console.log("This shoulda worka")
   res.sendFile(path.join(__dirname, "client/public/login.html"));
 });
 app.use("/", routes);
