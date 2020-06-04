@@ -220,9 +220,9 @@ function AllCountries() {
             {questionsObject && questionsObject.length  > 0 ? (
               <List>
                 {questionsObject.map(question => (
-                  <ListItem key={question.question}>
+                  <ListItem key={question.questionn}>
                       <strong>
-                        {question.question + "     -" + question.person}
+                        {question.questionn + "     -" + question.person}
                       </strong>
                   </ListItem>
                 ))}

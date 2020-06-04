@@ -3,6 +3,7 @@ import NoMatch from "./pages/NoMatch";
 import AllCountries from "./pages/AllCountries";
 import UserProfile from "./pages/UserProfile";
 import Landing from "./pages/Landing";
+import Game from "./pages/Game";
 // import { BrowserRouter } from "react-router-dom";
 
 import {
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route exact path={"/members/:username/:id"}>
         <UserProfile />
+        </Route>
+        <Route exact path={"/game/:username/:id"}>
+        <Game />
         </Route>
       <Route>
         <NoMatch />

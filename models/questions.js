@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const questionsSchema = new Schema({
   place: { type: String, required: true },
   person: { type: String, required: true },
-  question: { type: String, required: true},
+  questionn: { type: String, required: true},
   date: { type: Date, default: Date.now }
 });
 
